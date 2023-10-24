@@ -4,7 +4,15 @@ import { FaChevronCircleRight } from 'react-icons/fa'
 import { GoDot } from 'react-icons/go'
 import { GoDotFill } from 'react-icons/go'
 
-export default function ImageSlider({ pictures }) {
+interface PictureProps {
+	pictures: {
+		url: string
+		description: string
+		alt: string
+	}[]
+}
+
+const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 	const [imageIndex, setImageIndex] = useState(0)
 
 	const prevImage = () => {
@@ -68,3 +76,5 @@ export default function ImageSlider({ pictures }) {
 		</div>
 	)
 }
+
+export default ImageSlider

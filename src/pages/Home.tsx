@@ -1,6 +1,7 @@
 import React from 'react'
 import Profile from '../components/Profile'
 import Certifications from '../components/Certifications'
+import self from '../assets/self.png'
 
 export default function Home() {
 	return (
@@ -28,7 +29,7 @@ export default function Home() {
 				</a>
 			</div>
 
-			<Profile title="MATT RAY" subTitle="Web Developer & QA Automation Engineer" img="self.png" />
+			<Profile title="MATT RAY" subTitle="Web Developer & QA Automation Engineer" img={self} />
 			<Certifications />
 			<div className="p-3 border-[1px] border-green-600">
 				<h2 className="font-title font-bold text-xl">A little bit about myself</h2>

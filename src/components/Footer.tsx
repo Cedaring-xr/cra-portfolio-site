@@ -1,10 +1,10 @@
 import React from 'react'
 
-type Props = {
-	data: string
+type FooterProps = {
+	date: string
 }
 
-const Footer = ({ date }) => {
+const Footer: React.FC<FooterProps> = ({ date }) => {
 	return (
 		<>
 			<div className="bg-slate-800 text-white">

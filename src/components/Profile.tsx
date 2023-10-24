@@ -1,6 +1,12 @@
 import React from 'react'
 
-export default function Profile({ title, subTitle, img }) {
+interface ProfileProps {
+	title: string
+	subTitle: string
+	img: string
+}
+
+const Profile: React.FC<ProfileProps> = ({ title, subTitle, img }) => {
 	return (
 		<div id="profile-container" className="relative w-[375px] h-[265px] p-0 m-0 border-2 border-red-500">
 			<div className="polygon absolute bg-neutral-500 top-[28px] left-[28px]"></div>
@@ -22,3 +28,4 @@ export default function Profile({ title, subTitle, img }) {
 		</div>
 	)
 }
+export default Profile

@@ -1,8 +1,21 @@
-import React, { useEffect, useState } from 'react'
-
 import ImageSlider from './ImageSlider'
 
-export default function Project({ title, description, pictures, logos, link }) {
+type ProjectProps = {
+	title: string
+	description: string
+	pictures: {
+		url: string
+		description: string
+		alt: string
+	}[]
+	logos: {
+		name: string
+		url: string
+	}[]
+	link: string
+}
+
+const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, link }) => {
 	return (
 		<div className="p-2 my-8 mx-2 w-[380px] flex flex-col items-center">
 			<h2 className="font-title text-2xl">{title}</h2>
@@ -27,3 +40,5 @@ export default function Project({ title, description, pictures, logos, link }) {
 		</div>
 	)
 }
+
+export default Project

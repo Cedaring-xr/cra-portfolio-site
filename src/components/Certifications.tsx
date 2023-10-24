@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import CCP from '/public/icons/CCP.png'
-import SAA from '/public/icons/SAA.png'
+import CCP from '../assets/icons/CCP.png'
+import SAA from '../assets/icons/SAA.png'
 
-function Certifications() {
+const Certifications = () => {
 	const [modalopen, setModalOpen] = useState(false)
 
 	const handleModalOpen = () => {
