@@ -5,22 +5,42 @@ const Header = () => {
 		<>
 			<div
 				id="header-container"
-				className="bg-gradient-to-b from-stone-700 from-50% flex flex-row h-[100px] md:bg-gradient-to-r md:from-10%"
+				className="transparent flex flex-row h-[90px] w-ful z-10 sans-font absolute top-0"
 			>
-				<a href="/">
-					<h1 className="text-3xl font-display text-white my-4 mx-2">Matt Ray Dev Portfolio</h1>
-				</a>
-				{/* <nav>
-					<ul>
+				<div className="bg-stone-900 m-1 p-1 rounded-lg opacity-95">
+					<a href="/">
+						<h1 className="text-3xl text-white">Matt Ray Dev Portfolio</h1>
+						<h4 className="text-white mx-2 serif-font">
+							Showcase of personal side projects and coding work
+						</h4>
+					</a>
+				</div>
+
+				<nav className="m-4 ">
+					<ul className="flex flex-row gap-6 text-amber-600 border-b-2 border-amber-600">
 						<li>
-							<button className="p-2 m-4 bg-emerald-700 text-white rounded-full w-[200px]">
-								<a href="/projects" className="text-2xl font-display">
+							<button className="">
+								<a href="/projects" className="text-2xl font-sans font-bold uppercase">
 									Projects
 								</a>
 							</button>
 						</li>
+						<li>
+							<button className="">
+								<a href="/projects" className="text-2xl font-sans font-bold uppercase">
+									Resume
+								</a>
+							</button>
+						</li>
+						<li>
+							<button className="">
+								<a href="/projects" className="text-2xl font-sans font-bold uppercase">
+									GitHub
+								</a>
+							</button>
+						</li>
 					</ul>
-				</nav> */}
+				</nav>
 			</div>
 		</>
 	)

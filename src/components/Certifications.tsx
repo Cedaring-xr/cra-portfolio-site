@@ -17,7 +17,7 @@ const Certifications = () => {
 	}
 
 	return (
-		<div>
+		<div className="bg-stone-900 p-2 m-8 text-white rounded-lg">
 			<h2 className="font-title font-2xl">Current Earned Certifications</h2>
 			<div className="flex flex-row">
 				<span className="font-title text-3xl m-2" onClick={() => handleModalOpen}>

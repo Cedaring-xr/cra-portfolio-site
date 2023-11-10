@@ -13,7 +13,7 @@ export default function PageRoutes() {
 				<Route path="/" element={<Home />} />
 				<Route path="/projects" element={<Projects />} />
 			</Routes>
-			<Footer date="oct 2023" />
+			<Footer date="Nov 2023" />
 		</Router>
 	)
 }

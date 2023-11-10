@@ -35,7 +35,10 @@ const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 		})
 	}
 	return (
-		<div id="carousel-container" className=" w-[350px] h-[350px] overflow-hidden">
+		<div
+			id="carousel-container"
+			className=" w-[350px] h-[300px] overflow-hidden border-[1px] border-stone-900 relative"
+		>
 			<div className="relative w-[1050px] flex">
 				{pictures.map((image) => (
 					<div key={image.url}>
@@ -61,7 +64,10 @@ const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 					<FaChevronCircleRight className="text-3xl text-neutral-700 group-hover:text-slate-100 group-focus-visible:text-slate-100 mr-1 transition-all ease-in-out duration-200" />
 				</button>
 			</div>
-			<div id="image-button-container" className="absolute flex left-[175px] top-[545px]">
+			<div
+				id="image-button-container"
+				className="absolute flex left-1/2 transform -translate-x-1/2 top-[280px] z-0 py-[1px] px-2 bg-slate-900 rounded-t-xl opacity-90"
+			>
 				{pictures.map((_, index) => (
 					<button
 						key={index}
