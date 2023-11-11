@@ -5,9 +5,12 @@ import mtn from '../assets/spaceMountains.png'
 import components1 from '../assets/ReactComponents1.png'
 import components2 from '../assets/ReactComponents2.png'
 import components3 from '../assets/ReactComponents3.png'
-import elevation1 from '../assets/elevationWeatherExample1.png'
-import elevation2 from '../assets/elevationWeatherExample2.png'
-import elevation3 from '../assets/elevationWeatherExample3.png'
+import art1 from '../assets/Art1.png'
+import art2 from '../assets/Art2.png'
+import art3 from '../assets/Art3.png'
+import EW1 from '../assets/EW1.png'
+import EW2 from '../assets/EW2.png'
+import EW3 from '../assets/EW3.png'
 
 // logos
 import ThreeJs from '../assets/icons/Three.png'
@@ -24,17 +27,19 @@ import Amplify from '../assets/icons/amplify.png'
 export default function Projects() {
 	return (
 		<>
-			<div className="bg-transparent">
+			<div className="bg-transparent md:background">
 				<h2 className="font-title text-3xl">Personal Coding Projects</h2>
-				<div id="projects-container" className="flex flex-col md:flex-row md:gap-8 md:flex-wrap">
+				<div
+					id="projects-container"
+					className="flex flex-col md:flex-row md:gap-8 md:flex-wrap md:max-w-[1400px] mx-auto justify-center"
+				>
 					<Project
 						title="Elevation Weather App"
 						description="search for current weather based on city location or elevation"
 						pictures={[
-							{ url: elevation1, description: 'camping', alt: 'camping image' },
-							{ url: elevation2, description: 'ship in ice', alt: 'ship in ice' },
-							{ url: elevation3, description: 'elevation example', alt: 'ps' },
-							{ url: elevation3, description: 'elevation example', alt: 'ps' }
+							{ url: EW1, description: 'camping', alt: 'camping image' },
+							{ url: EW2, description: 'ship in ice', alt: 'ship in ice' },
+							{ url: EW3, description: 'elevation example', alt: 'ps' }
 						]}
 						logos={[
 							{ name: 'React', url: ReactJS },
@@ -44,7 +49,7 @@ export default function Projects() {
 						link="https://dev.dr7t8my3rq95b.amplifyapp.com/"
 					/>
 					<Project
-						title="Quiz Generator"
+						title="Full Stack Quiz Generator"
 						description="Create and Share custom multiple choice quizzes/surveys"
 						pictures={[
 							{ url: camp, description: 'camping', alt: 'camping image' },
@@ -60,12 +65,12 @@ export default function Projects() {
 						link="https://github.com/Cedaring-xr"
 					/>
 					<Project
-						title="Cedaring VR Art"
+						title="Cedaring VR Art Showcase"
 						description="Displaying 3D scenes of VR artwork and rock climbing"
 						pictures={[
-							{ url: camp, description: 'camping', alt: 'camping image' },
-							{ url: ship, description: 'ship in ice', alt: 'ship in ice' },
-							{ url: mtn, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
+							{ url: art1, description: 'camping', alt: 'camping image' },
+							{ url: art2, description: 'ship in ice', alt: 'ship in ice' },
+							{ url: art3, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
 						]}
 						logos={[
 							{ name: 'React', url: ReactJS },

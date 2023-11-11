@@ -6,8 +6,8 @@ type FooterProps = {
 
 const Footer: React.FC<FooterProps> = ({ date }) => {
 	return (
-		<div className="bg-stone-900 text-white flex justify-between px-8 py-1">
-			<span>Created by Matt Ray</span>
+		<div className="text-white bg-stone-950 flex justify-between px-[5px] sm:px-2 md:px-8 text-sm md:text-base py-1 shadow-lg">
+			<span>Created by: Matt Ray</span>
 			<span>last updated: {date}</span>
 		</div>
 	)

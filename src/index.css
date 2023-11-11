@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=PT+Sans:wght@400;700&family=Rubik:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=PT+Sans:wght@400;700&family=Rubik:wght@300;400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,11 +10,20 @@
 		height: 200px;
 		-webkit-clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 90%);
 		clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 90%);
-		background-color: rgb(51, 51, 51);
 		border-radius: 20px;
 		border-top-left-radius: 230px 55px;
 		border-bottom-left-radius: 110px 35px;
 	}
+	.polygon-large {
+		width: 500px;
+		height: 350px;
+		-webkit-clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 90%);
+		clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 90%);
+		border-radius: 20px;
+		border-top-left-radius: 470px 90px;
+		border-bottom-left-radius: 210px 50px;
+	}
+
 	.button {
 		@apply rounded-lg p-1 px-3 m-2 bg-neutral-900 text-neutral-100 border-[1px];
 	}
@@ -22,10 +31,24 @@
 		font-family: 'Merriweather', serif;
 	}
 	.sans-font {
-		font-family: 'Kanit', sans-serif;
+		font-family: 'Rubik', sans-serif;
 	}
 	.background {
 		background-image: url('assets/whiteBackgroundMountains.png');
-		background-size: cover;
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.header-active {
+		background-color: rgb(34, 34, 34);
+	}
+	.box-shadow {
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+	.line-break {
+		@apply h-[2px] bg-amber-600 border-none w-3/4 mt-1;
+	}
+	.quarter-circle {
+		border-top-left-radius: 100%;
 	}
 }

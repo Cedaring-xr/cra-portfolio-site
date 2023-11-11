@@ -14,6 +14,7 @@ interface PictureProps {
 
 const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 	const [imageIndex, setImageIndex] = useState(0)
+	const containerWidth: number = 350 * pictures.length
 
 	const prevImage = () => {
 		console.log('prev')
@@ -39,7 +40,7 @@ const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 			id="carousel-container"
 			className=" w-[350px] h-[300px] overflow-hidden border-[1px] border-stone-900 relative"
 		>
-			<div className="relative w-[1050px] flex">
+			<div className={`relative w-[${containerWidth}px] flex`}>
 				{pictures.map((image) => (
 					<div key={image.url}>
 						<img
@@ -51,14 +52,14 @@ const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 				))}
 				<button
 					aria-label="view previous"
-					className="hover:bg-slate-700 focus-visible:bg-slate-700 opacity-70 w-[35px] h-[350px] cursor-pointer absolute flex justify-start items-center transition-all ease-in-out duration-200 group"
+					className="hover:bg-slate-700 focus-visible:bg-slate-700 opacity-70 w-[35px] h-[300px] cursor-pointer absolute flex justify-start items-center transition-all ease-in-out duration-200 group"
 					onClick={() => prevImage()}
 				>
 					<FaChevronCircleLeft className="text-3xl text-neutral-700 group-hover:text-slate-100 group-focus-visible:text-slate-100 ml-1 transition-all ease-in-out duration-200" />
 				</button>
 				<button
 					aria-label="view-next"
-					className="hover:bg-slate-700 focus-visible:bg-slate-700 opacity-70 h-[350px] w-[35px] absolute left-[315px] flex justify-end items-center transition-all ease-in-out duration-200 group"
+					className="hover:bg-slate-700 focus-visible:bg-slate-700 opacity-70 h-[300px] w-[35px] absolute left-[315px] flex justify-end items-center transition-all ease-in-out duration-200 group"
 					onClick={() => nextImage()}
 				>
 					<FaChevronCircleRight className="text-3xl text-neutral-700 group-hover:text-slate-100 group-focus-visible:text-slate-100 mr-1 transition-all ease-in-out duration-200" />
