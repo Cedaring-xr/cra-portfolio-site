@@ -40,7 +40,7 @@ const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 			id="carousel-container"
 			className=" w-[350px] h-[300px] overflow-hidden border-[1px] border-stone-900 relative"
 		>
-			<div className={`relative w-[${containerWidth}px] flex`}>
+			<div className={`relative w-[1050px] flex`}>
 				{pictures.map((image) => (
 					<div key={image.url}>
 						<img
