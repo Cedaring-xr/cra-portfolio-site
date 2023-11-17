@@ -21,7 +21,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, 
 			<h2 className="font-title text-2xl font-bold my-2">{title}</h2>
 			<ImageSlider pictures={pictures} />
 			<span className="m-2 text-white">{description}</span>
-			<a className="button mx-16 my-4" href={link} target="_blank">
+			<a className="button mx-16 my-4 bg-amber-600 text-black" href={link} target="_blank">
 				View Live Project
 			</a>
 			<div>
@@ -31,7 +31,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, 
 						<div key={logo.name} className="">
 							<div className="m-1 max-w-[70px]">
 								<img src={logo.url} className="h-[70px]"></img>
-								<span className="font-serif">{logo.name}</span>
+								<p className="font-serif text-center">{logo.name}</p>
 							</div>
 						</div>
 					))}
