@@ -13,7 +13,6 @@ import EW2 from '../assets/EW2.png'
 import EW3 from '../assets/EW3.png'
 import res1 from '../assets/oldResume1.png'
 import res2 from '../assets/pdfMe.png'
-
 // logos
 import ThreeJs from '../assets/icons/Three.png'
 import ReactJS from '../assets/icons/react.png'
@@ -26,7 +25,7 @@ import Amplify from '../assets/icons/amplify.png'
 import Lambda from '../assets/icons/lambda.png'
 import Python from '../assets/icons/python.png'
 
-export default function Projects() {
+export default function ProjectsPage() {
 	return (
 		<>
 			<div className="bg-transparent md:background mt-[180px]">

@@ -3,7 +3,7 @@ import Profile from '../components/Profile'
 import Certifications from '../components/Certifications'
 import self from '../assets/self.png'
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<div>
 			<div className="background pt-[350px] flex flex-col">
