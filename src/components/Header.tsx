@@ -21,7 +21,7 @@ const Header = () => {
 	}, [])
 
 	const stickyHeader =
-		isSticky && 'sticky bg-zinc-900 transition ease-in-out duration-500 translate-y-full -top-[60px] -mt-16'
+		isSticky && 'sticky bg-zinc-900 transition ease-in-out duration-500 translate-y-full -top-[61px] -mt-16'
 	const stickyTitle = isSticky && 'mt-3 text-white text-2xl lg:text-[2.1rem]'
 	const stickySubtitle = isSticky && 'hidden'
 	const stickyNav = isSticky && 'mt-3'
