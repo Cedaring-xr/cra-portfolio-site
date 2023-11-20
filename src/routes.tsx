@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/Home'
 import ProjectsPage from './pages/Projects'
@@ -12,8 +11,8 @@ export default function PageRoutes() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<HomePage />} />
-				<Route path="/projects/" element={<ProjectsPage />} />
-				<Route path="/resume/" element={<ResumePage />} />
+				<Route path="/projects" element={<ProjectsPage />} />
+				<Route path="/resume" element={<ResumePage />} />
 			</Routes>
 			<Footer date="Nov 2023" />
 		</Router>

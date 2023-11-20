@@ -1,7 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { BiMenuAltRight } from 'react-icons/bi'
+import { AiOutlineClose } from 'react-icons/ai'
+
+type Size = {
+	width: number
+	height: number
+}
 
 const Header = () => {
 	const [isSticky, setSticky] = useState(false)
+	const [menuOpen, setMenuOpen] = useState(false)
+	const [size, setSize] = useState<Size>({ width: window.innerWidth, height: window.innerHeight })
+	const breakpoint = 764
+
+	const menuToggleOpen = () => {
+		document.body.classList.toggle('header-menu-open')
+		setMenuOpen((open) => !open)
+	}
+
+	const menuCloseFull = () => {
+		document.body.classList.remove('header-menu-open')
+		setMenuOpen(false)
+	}
 
 	const handleScroll = () => {
 		const offset = window.scrollY
@@ -20,11 +40,24 @@ const Header = () => {
 		}
 	}, [])
 
+	useEffect(() => {
+		const handleResize = () => {
+			setSize({
+				width: window.innerWidth,
+				height: window.innerHeight
+			})
+		}
+		window.addEventListener('resize', handleResize)
+
+		return () => window.removeEventListener('resize', handleResize)
+	}, [size.width])
+
 	const stickyHeader = isSticky && 'sticky bg-zinc-900 transition ease-in-out duration-500  -mt-16'
 	const stickyTitle = isSticky && 'mt-3 text-white text-2xl lg:text-[2.1rem]'
 	const stickySubtitle = isSticky && 'hidden'
 	const stickyNav = isSticky && 'mt-3'
 	const stickyButton = isSticky && 'border-none'
+	const stickyMobile = isSticky && '-mt-4 md:-mr-24'
 
 	return (
 		<div
@@ -42,39 +75,90 @@ const Header = () => {
 				</a>
 			</div>
 			<nav className={`my-16 md:mr-24 lg:mr-24 xl:mr-48 ${stickyNav}`}>
-				<ul className="flex flex-row gap-12 lg:gap-20 text-amber-600">
-					<li>
-						<button className={`border-b-2 border-black ${stickyButton}`}>
-							<a
-								href="/projects"
-								className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
-							>
-								Projects
-							</a>
-						</button>
-					</li>
-					<li>
-						<button className={`border-b-2 border-black ${stickyButton}`}>
-							<a
-								href="/resume"
-								className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
-							>
-								Resume
-							</a>
-						</button>
-					</li>
-					<li>
-						<button className={`border-b-2 border-black ${stickyButton}`}>
-							<a
-								href="https://github.com/Cedaring-xr"
-								target="_blank"
-								className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
-							>
-								GitHub
-							</a>
-						</button>
-					</li>
-				</ul>
+				{size.width < breakpoint ? (
+					<>
+						<BiMenuAltRight
+							className={`text-7xl text-amber-600 -mt-8 ${stickyMobile}`}
+							onClick={menuToggleOpen}
+						/>
+						{menuOpen && (
+							<div className="fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-6">
+								<a href="/">
+									<h1 className={`text-3xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
+								</a>
+								<ul className="flex flex-col justify-center items-center text-4xl gap-6">
+									<li>
+										<AiOutlineClose
+											onClick={menuToggleOpen}
+											className="absolute right-10 hover:text-amber-600 top-6"
+										/>
+									</li>
+									<li className="hover:text-amber-600">
+										<button>
+											<a href="/projects" className="">
+												Projects
+											</a>
+										</button>
+									</li>
+									<li className="hover:text-amber-600">
+										<button>
+											<a href="/resume" className="">
+												Resume
+											</a>
+										</button>
+									</li>
+									<li className="hover:text-amber-600">
+										<button>
+											<a
+												href="https://github.com/Cedaring-xr"
+												target="_blank"
+												rel="noreferrer"
+												className=""
+											>
+												GitHub
+											</a>
+										</button>
+									</li>
+								</ul>
+							</div>
+						)}
+					</>
+				) : (
+					<ul className="flex flex-row gap-12 lg:gap-20 text-amber-600">
+						<li>
+							<button className={`border-b-2 border-black ${stickyButton}`}>
+								<a
+									href="/projects"
+									className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
+								>
+									Projects
+								</a>
+							</button>
+						</li>
+						<li>
+							<button className={`border-b-2 border-black ${stickyButton}`}>
+								<a
+									href="/resume"
+									className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
+								>
+									Resume
+								</a>
+							</button>
+						</li>
+						<li>
+							<button className={`border-b-2 border-black ${stickyButton}`}>
+								<a
+									href="https://github.com/Cedaring-xr"
+									target="_blank"
+									rel="noreferrer"
+									className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
+								>
+									GitHub
+								</a>
+							</button>
+						</li>
+					</ul>
+				)}
 			</nav>
 		</div>
 	)

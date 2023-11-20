@@ -11,8 +11,8 @@ import art3 from '../assets/Art3.png'
 import EW1 from '../assets/EW1.png'
 import EW2 from '../assets/EW2.png'
 import EW3 from '../assets/EW3.png'
-import res1 from '../assets/oldResume1.png'
-import res2 from '../assets/pdfMe.png'
+import PiCamera1 from '../assets/piCamera2.png'
+import PiCamera2 from '../assets/timelapse1.png'
 // logos
 import ThreeJs from '../assets/icons/Three.png'
 import ReactJS from '../assets/icons/react.png'
@@ -24,6 +24,10 @@ import S3 from '../assets/icons/S3.png'
 import Amplify from '../assets/icons/amplify.png'
 import Lambda from '../assets/icons/lambda.png'
 import Python from '../assets/icons/python.png'
+import Next from '../assets/icons/nextJS.png'
+import Dynamo from '../assets/icons/dynamo.png'
+import Cognito from '../assets/icons/cognito.png'
+import ApiGateway from '../assets/icons/APIgateway.png'
 
 export default function ProjectsPage() {
 	return (
@@ -65,7 +69,7 @@ export default function ProjectsPage() {
 						]}
 						link="https://cedaring.art/"
 					/>
-					<Project
+					{/* <Project
 						title="Cloud Resume Template"
 						description="Customizable resume template for generating a resume in html that is exportable to pdf using JSpdf plugin"
 						pictures={[
@@ -79,14 +83,18 @@ export default function ProjectsPage() {
 							{ name: 'AWS S3', url: S3 }
 						]}
 						link=""
-					/>
+					/> */}
 					<Project
 						title="Raspberry Pi time lapse camera"
 						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running lambda functions to process pictures. Final output is displayed in an amplify website"
 						pictures={[
-							{ url: camp, description: 'camping', alt: 'camping image' },
-							{ url: ship, description: 'ship in ice', alt: 'ship in ice' },
-							{ url: mtn, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
+							{ url: PiCamera1, description: 'camping', alt: 'camping image' },
+							{ url: PiCamera2, description: 'ship in ice', alt: 'ship in ice' },
+							{
+								url: PiCamera1,
+								description: '',
+								alt: ''
+							}
 						]}
 						logos={[
 							{ name: 'Python', url: Python },
@@ -112,22 +120,24 @@ export default function ProjectsPage() {
 						]}
 						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
 					/>
-					{/* <Project
-						title="Full Stack Quiz Generator"
-						description="Create and Share custom multiple choice quizzes/surveys"
+					<Project
+						title="List Productivity Tracker"
+						description="Full stack todo-app, productivity tracker with suggestions and stats"
 						pictures={[
 							{ url: camp, description: 'camping', alt: 'camping image' },
 							{ url: ship, description: 'ship in ice', alt: 'ship in ice' },
 							{ url: mtn, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
 						]}
 						logos={[
-							{ name: 'React', url: ReactJS },
-							{ name: 'Tailwind CSS', url: Tailwind },
-							{ name: 'AWS', url: AWSCombo },
-							{ name: 'Next.js', url: Next }
+							{ name: 'Next.js', url: Next },
+							{ name: 'Tailwind', url: Tailwind },
+							{ name: 'Typescript', url: Typescript },
+							{ name: 'Dynamo', url: Dynamo },
+							{ name: 'Cognito', url: Cognito },
+							{ name: 'API gateway', url: ApiGateway }
 						]}
-						link="https://github.com/Cedaring-xr"
-					/> */}
+						link=""
+					/>
 				</div>
 			</div>
 		</>

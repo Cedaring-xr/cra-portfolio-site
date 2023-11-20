@@ -1,4 +1,3 @@
-import React from 'react'
 import Profile from '../components/Profile'
 import Certifications from '../components/Certifications'
 import self from '../assets/self.png'
