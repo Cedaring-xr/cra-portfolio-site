@@ -35,7 +35,10 @@ export default function ProjectsPage() {
 		<>
 			<div className="bg-transparent md:background mt-[180px]">
 				<h2 className="font-title text-2xl lg:text-3xl text-center">Personal Coding Projects</h2>
-				<div id="projects-container" className="flex flex-row gap-8 flex-wrap md:max-w-[1400px] justify-center">
+				<div
+					id="projects-container"
+					className="flex flex-row gap-8 flex-wrap md:max-w-[1400px] mx-auto justify-center"
+				>
 					<Project
 						title="Elevation Weather App"
 						description="Simple weather application that can search for current weather based on city location or elevation"
