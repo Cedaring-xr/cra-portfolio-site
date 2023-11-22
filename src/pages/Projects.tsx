@@ -1,7 +1,4 @@
 import Project from '../components/Project'
-import camp from '../assets/camping1.png'
-import ship from '../assets/icyShip.png'
-import mtn from '../assets/spaceMountains.png'
 import RC1 from '../assets/RC1.png'
 import RC2 from '../assets/RC2.png'
 import RC3 from '../assets/RC3.png'
@@ -13,6 +10,9 @@ import EW2 from '../assets/EW2.png'
 import EW3 from '../assets/EW3.png'
 import PiCamera1 from '../assets/piCamera2.png'
 import PiCamera2 from '../assets/timelapse1.png'
+import Journal from '../assets/journal.png'
+import Infinity from '../assets/infinity2.png'
+import LandingPage from '../assets/landingPage.png'
 // logos
 import ThreeJs from '../assets/icons/Three.png'
 import ReactJS from '../assets/icons/react.png'
@@ -28,16 +28,14 @@ import Next from '../assets/icons/nextJS.png'
 import Dynamo from '../assets/icons/dynamo.png'
 import Cognito from '../assets/icons/cognito.png'
 import ApiGateway from '../assets/icons/APIgateway.png'
+import Cypress from '../assets/icons/cypress.png'
 
 export default function ProjectsPage() {
 	return (
 		<>
 			<div className="bg-transparent md:background mt-[180px]">
 				<h2 className="font-title text-2xl lg:text-3xl text-center">Personal Coding Projects</h2>
-				<div
-					id="projects-container"
-					className="flex flex-col md:flex-row md:gap-8 md:flex-wrap md:max-w-[1400px] mx-auto justify-center"
-				>
+				<div id="projects-container" className="flex flex-row gap-8 flex-wrap md:max-w-[1400px] justify-center">
 					<Project
 						title="Elevation Weather App"
 						description="Simple weather application that can search for current weather based on city location or elevation"
@@ -102,7 +100,7 @@ export default function ProjectsPage() {
 							{ name: 'Lambda', url: Lambda },
 							{ name: 'Amplify', url: Amplify }
 						]}
-						link=""
+						link="https://main.d2zforex81luny.amplifyapp.com/"
 					/>
 					<Project
 						title="React Component Practice"
@@ -121,12 +119,16 @@ export default function ProjectsPage() {
 						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
 					/>
 					<Project
-						title="List Productivity Tracker"
-						description="Full stack todo-app, productivity tracker with suggestions and stats"
+						title="Ittero"
+						description="Full stack list creation, productivity tracker, quick journal, and stats for continuous improvement"
 						pictures={[
-							{ url: camp, description: 'camping', alt: 'camping image' },
-							{ url: ship, description: 'ship in ice', alt: 'ship in ice' },
-							{ url: mtn, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
+							{ url: Journal, description: 'camping', alt: 'camping image' },
+							{ url: Infinity, description: 'ship in ice', alt: 'ship in ice' },
+							{
+								url: LandingPage,
+								description: 'psychedelic mountains',
+								alt: 'psychedelic colorful mountains'
+							}
 						]}
 						logos={[
 							{ name: 'Next.js', url: Next },
@@ -134,7 +136,8 @@ export default function ProjectsPage() {
 							{ name: 'Typescript', url: Typescript },
 							{ name: 'Dynamo', url: Dynamo },
 							{ name: 'Cognito', url: Cognito },
-							{ name: 'API gateway', url: ApiGateway }
+							{ name: 'API gateway', url: ApiGateway },
+							{ name: 'Cypress', url: Cypress }
 						]}
 						link=""
 					/>

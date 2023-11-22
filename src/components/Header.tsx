@@ -78,7 +78,7 @@ const Header = () => {
 				{size.width < breakpoint ? (
 					<>
 						<BiMenuAltRight
-							className={`text-7xl text-amber-600 -mt-8 ${stickyMobile}`}
+							className={`text-7xl text-amber-600 -mt-5 ${stickyMobile}`}
 							onClick={menuToggleOpen}
 						/>
 						{menuOpen && (

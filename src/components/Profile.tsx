@@ -23,7 +23,7 @@ const Profile: React.FC<ProfileProps> = ({ title, subTitle, img }) => {
 				id="profile-circle-one"
 				className="w-[125px] h-[125px] lg:w-[180px] lg:h-[180px] bg-transparent rounded-full absolute left-[237px] top-[127px] lg:left-[390px] lg:top-[210px] border-[5px] border-stone-900 overflow-hidden"
 			>
-				<img src={img} alt="profile-photo"></img>
+				<img src={img} alt="profile"></img>
 			</div>
 		</div>
 	)
