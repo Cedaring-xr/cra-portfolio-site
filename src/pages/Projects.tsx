@@ -70,24 +70,9 @@ export default function ProjectsPage() {
 						]}
 						link="https://cedaring.art/"
 					/>
-					{/* <Project
-						title="Cloud Resume Template"
-						description="Customizable resume template for generating a resume in html that is exportable to pdf using JSpdf plugin"
-						pictures={[
-							{ url: res1, description: 'camping', alt: 'camping image' },
-							{ url: res2, description: 'ship in ice', alt: 'ship in ice' },
-							{ url: res1, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
-						]}
-						logos={[
-							{ name: 'React', url: ReactJS },
-							{ name: 'Tailwind', url: Tailwind },
-							{ name: 'AWS S3', url: S3 }
-						]}
-						link=""
-					/> */}
 					<Project
 						title="Raspberry Pi time lapse camera"
-						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running lambda functions to process pictures. Final output is displayed in an amplify website"
+						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running Lambda functions to process pictures. Final output is displayed in an amplify website"
 						pictures={[
 							{ url: PiCamera1, description: 'camping', alt: 'camping image' },
 							{ url: PiCamera2, description: 'ship in ice', alt: 'ship in ice' },
@@ -123,14 +108,14 @@ export default function ProjectsPage() {
 					/>
 					<Project
 						title="Ittero"
-						description="Full stack list creation, productivity tracker, quick journal, and stats for continuous improvement"
+						description="Full stack list creation, productivity tracker, quick journal, and feedback for continuous improvement"
 						pictures={[
-							{ url: Journal, description: 'camping', alt: 'camping image' },
-							{ url: Infinity, description: 'ship in ice', alt: 'ship in ice' },
+							{ url: Journal, description: 'writing journal', alt: 'writing journal' },
+							{ url: Infinity, description: 'website logo with background', alt: 'website logo' },
 							{
 								url: LandingPage,
-								description: 'psychedelic mountains',
-								alt: 'psychedelic colorful mountains'
+								description: 'website homepage',
+								alt: 'website homepage'
 							}
 						]}
 						logos={[

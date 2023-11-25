@@ -23,11 +23,18 @@ const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, 
 			<span className="m-2 text-white">{description}</span>
 
 			{link.length > 1 ? (
-				<a className="button mx-16 my-4 bg-amber-600 text-black" href={link} target="_blank" rel="noreferrer">
+				<a
+					className="button mx-16 my-4 bg-amber-600 hover:bg-amber-500 text-black hover:scale-105"
+					href={link}
+					target="_blank"
+					rel="noreferrer"
+				>
 					View Live Project
 				</a>
 			) : (
-				<button className="button mx-16 my-4 bg-zinc-400 text-black">Currently Unavailable</button>
+				<button className="button mx-16 my-4 bg-zinc-400 text-black cursor-default">
+					Currently Unavailable
+				</button>
 			)}
 			<div>
 				<span className="font-title font-bold text-white">Tech Stack</span>

@@ -5,7 +5,7 @@ import self from '../assets/self.png'
 export default function HomePage() {
 	return (
 		<div>
-			<div className="background pt-[350px] flex flex-col">
+			<div className="background pt-[200px] lg:pt-[350px] flex flex-col">
 				<Profile title="MATT RAY" subTitle="Web Developer & QA Automation Engineer" img={self} />
 				<Certifications />
 			</div>

@@ -45,6 +45,12 @@
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+	@media screen and (max-width: 600px) {
+		.background {
+			background-size: 140%;
+		}
+	}
+
 	.header-active {
 		background-color: rgb(34, 34, 34);
 	}

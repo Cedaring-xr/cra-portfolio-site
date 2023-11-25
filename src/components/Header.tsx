@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
 
-type Size = {
+type SizeProps = {
 	width: number
 	height: number
 }
@@ -10,17 +10,12 @@ type Size = {
 const Header = () => {
 	const [isSticky, setSticky] = useState(false)
 	const [menuOpen, setMenuOpen] = useState(false)
-	const [size, setSize] = useState<Size>({ width: window.innerWidth, height: window.innerHeight })
+	const [size, setSize] = useState<SizeProps>({ width: window.innerWidth, height: window.innerHeight })
 	const breakpoint = 764
 
 	const menuToggleOpen = () => {
 		document.body.classList.toggle('header-menu-open')
 		setMenuOpen((open) => !open)
-	}
-
-	const menuCloseFull = () => {
-		document.body.classList.remove('header-menu-open')
-		setMenuOpen(false)
 	}
 
 	const handleScroll = () => {
@@ -52,7 +47,7 @@ const Header = () => {
 		return () => window.removeEventListener('resize', handleResize)
 	}, [size.width])
 
-	const stickyHeader = isSticky && 'sticky bg-zinc-900 transition ease-in-out duration-500  -mt-16'
+	const stickyHeader = isSticky && 'sticky bg-zinc-950 transition ease-in-out duration-500  -mt-16'
 	const stickyTitle = isSticky && 'mt-3 text-white text-2xl lg:text-[2.1rem]'
 	const stickySubtitle = isSticky && 'hidden'
 	const stickyNav = isSticky && 'mt-3'
@@ -62,14 +57,16 @@ const Header = () => {
 	return (
 		<div
 			id="header-container"
-			className={`transparent flex flex-row justify-between h-[60px] w-full z-10 sans-font absolute top-0 ${stickyHeader}`}
+			className={`transparent flex flex-row justify-between h-[60px] w-full z-10  sans-font absolute top-0 ${stickyHeader}`}
 		>
-			<div className="min-w-[400px]">
+			<div className="min-w-[250px]">
 				<a href="/">
-					<h1 className={`text-3xl lg:text-5xl text-black font-bold mt-12 ml-6 ${stickyTitle}`}>
+					<h1 className={`text-2xl md:text-3xl lg:text-5xl text-black font-bold mt-12 ml-6 ${stickyTitle}`}>
 						Matt Ray Dev Portfolio
 					</h1>
-					<h4 className={`text-black text-sm lg:text-base mx-6 mt-2 serif-font ${stickySubtitle}`}>
+					<h4
+						className={`text-black text-sm w-2/3 md:w-full lg:text-base mx-6 mt-2 serif-font ${stickySubtitle}`}
+					>
 						Showcase of personal side projects and coding work
 					</h4>
 				</a>
@@ -84,7 +81,7 @@ const Header = () => {
 						{menuOpen && (
 							<div className="fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-6">
 								<a href="/">
-									<h1 className={`text-3xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
+									<h1 className={`text-2xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
 								</a>
 								<ul className="flex flex-col justify-center items-center text-4xl gap-6">
 									<li>
