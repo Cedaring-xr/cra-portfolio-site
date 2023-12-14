@@ -13,6 +13,7 @@ import PiCamera2 from '../assets/timelapse1.png'
 import Journal from '../assets/journal.png'
 import Infinity from '../assets/infinity2.png'
 import LandingPage from '../assets/landingPage.png'
+import Blog1 from '../assets/blog1.png'
 // logos
 import ThreeJs from '../assets/icons/Three.png'
 import ReactJS from '../assets/icons/react.png'
@@ -105,6 +106,21 @@ export default function ProjectsPage() {
 							{ name: 'Jest', url: Jest }
 						]}
 						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
+					/>
+					<Project
+						title="Development Blog"
+						description="Personal Blog about development and coding"
+						pictures={[
+							{ url: Blog1, description: 'examples of react components', alt: 'example image' },
+							{ url: RC2, description: 'examples of react components', alt: 'example image' },
+							{ url: RC3, description: 'examples of react components', alt: 'example image' }
+						]}
+						logos={[
+							{ name: 'Next.js', url: Next },
+							{ name: 'Tailwind', url: Tailwind },
+							{ name: 'Typescript', url: Typescript }
+						]}
+						link=""
 					/>
 					<Project
 						title="Ittero"
