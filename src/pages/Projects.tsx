@@ -51,7 +51,8 @@ export default function ProjectsPage() {
 						logos={[
 							{ name: 'React', url: ReactJS },
 							{ name: 'Tailwind', url: Tailwind },
-							{ name: 'Amplify', url: Amplify }
+							{ name: 'Amplify', url: Amplify },
+							{ name: 'Typescript', url: Typescript }
 						]}
 						link="https://dev.dr7t8my3rq95b.amplifyapp.com/"
 					/>
