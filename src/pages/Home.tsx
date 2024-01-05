@@ -23,10 +23,15 @@ export default function HomePage() {
 							I Started with a casual interest in web development back in 2014. Most of the programming I
 							have done over the years is self taught following videos and tutorials through online
 							learning resources. I did go through a coding bootcamp back in 2015 for full stack
-							development. After that, I worked as a QA engineer for several years writing automation test
-							suites and performing testing on numerous web applications. As I progress, I would like to
-							transition out of QA testing and back into development and creating features and
-							applications.
+							development, but found it to be lacking in content and detailed explanations. After that, I
+							worked as a QA engineer for several years writing automation test suites and performing
+							testing on web applications for a variety of different companies.
+						</p>
+						<p className="indent-4 mt-2">
+							As I progress, I would like to transition out of QA testing and back into feature creation
+							and contributing to application development in a more meaningful way. I value the testing
+							mindset that I have gained and want to apply the focus on quality to other aspects of the
+							development process.
 						</p>
 					</div>
 					<div className="p-3 rounded-lg mt-8 lg:w-1/3">
@@ -37,7 +42,7 @@ export default function HomePage() {
 							outdoors. I try to find a good balance between technology/computer work and spending time
 							outside. My main outdoor hobby is rock climbing. It has been a big part of my life for many
 							years. I have spent a lot of time traveling and climbing around the western US. Aside from
-							climbing, I also started to get into mountain biking and nordic skiing. Learning new
+							rock climbing, I also started to get into mountain biking and nordic skiing. Learning new
 							activities has been a fun experience.
 						</p>
 					</div>
@@ -54,7 +59,7 @@ export default function HomePage() {
 							Aside from cloud development, I am completely enamoured by 3D web development, ThreeJS, and
 							creative coding. Building rich interactive 3D experiences for the web is a ton of fun and
 							extremely dynamic and unique. In the future I plan on diving more into ThreeJs, React3Fiber,
-							and creating more artistic stuff for the web for the fun of it.
+							and creating more artistic stuff for the fun of it.
 						</p>
 					</div>
 				</div>

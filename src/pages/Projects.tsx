@@ -10,10 +10,13 @@ import EW2 from '../assets/EW2.png'
 import EW3 from '../assets/EW3.png'
 import PiCamera1 from '../assets/piCamera2.png'
 import PiCamera2 from '../assets/timelapse1.png'
+import PiCamera3 from '../assets/timeLapse3.png'
 import Journal from '../assets/journal.png'
 import Infinity from '../assets/infinity2.png'
 import LandingPage from '../assets/landingPage.png'
 import Blog1 from '../assets/blog1.png'
+import Blog3 from '../assets/blog3.png'
+import Blog4 from '../assets/blog4.png'
 // logos
 import ThreeJs from '../assets/icons/Three.png'
 import ReactJS from '../assets/icons/react.png'
@@ -44,8 +47,8 @@ export default function ProjectsPage() {
 						title="Elevation Weather App"
 						description="Simple weather application that can search for current weather based on city location or elevation"
 						pictures={[
-							{ url: EW1, description: 'camping', alt: 'weather landing page screen' },
-							{ url: EW2, description: 'ship in ice', alt: 'weather display for warm climate' },
+							{ url: EW1, description: 'weather landing page', alt: 'weather landing page screen' },
+							{ url: EW2, description: 'hot weather result', alt: 'weather display for warm climate' },
 							{ url: EW3, description: 'elevation example', alt: 'weather display on elevation page' }
 						]}
 						logos={[
@@ -60,9 +63,9 @@ export default function ProjectsPage() {
 						title="Cedaring VR Art Showcase"
 						description="Learning ThreeJS and 3D web development basics in order to display artwork created in VR and create more dynamic and interesting web experiences"
 						pictures={[
-							{ url: art1, description: 'camping', alt: 'camping image' },
-							{ url: art2, description: 'ship in ice', alt: 'ship in ice' },
-							{ url: art3, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
+							{ url: art1, description: 'Cedaring art scenes', alt: 'Cedaring art scenes' },
+							{ url: art2, description: 'art modal', alt: 'art modal' },
+							{ url: art3, description: 'cedaring homepage', alt: 'Cedaring homepage' }
 						]}
 						logos={[
 							{ name: 'React', url: ReactJS },
@@ -76,12 +79,12 @@ export default function ProjectsPage() {
 						title="Raspberry Pi time lapse camera"
 						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running Lambda functions to process pictures. Final output is displayed in an amplify website"
 						pictures={[
-							{ url: PiCamera1, description: 'camping', alt: 'camping image' },
-							{ url: PiCamera2, description: 'ship in ice', alt: 'ship in ice' },
+							{ url: PiCamera1, description: 'camera setup', alt: 'camera setup' },
+							{ url: PiCamera2, description: 'landing page for website', alt: 'website landing page' },
 							{
-								url: PiCamera1,
-								description: '',
-								alt: ''
+								url: PiCamera3,
+								description: 'slideshow display',
+								alt: 'slideshow display section'
 							}
 						]}
 						logos={[
@@ -110,18 +113,18 @@ export default function ProjectsPage() {
 					/>
 					<Project
 						title="Development Blog"
-						description="Personal Blog about development and coding"
+						description="Personal Blog about development, coding, and interacting with cloud architecture"
 						pictures={[
-							{ url: Blog1, description: 'examples of react components', alt: 'example image' },
-							{ url: RC2, description: 'examples of react components', alt: 'example image' },
-							{ url: RC3, description: 'examples of react components', alt: 'example image' }
+							{ url: Blog1, description: 'blog homepage', alt: 'blog homepage' },
+							{ url: Blog3, description: 'example blog post content', alt: 'blog content' },
+							{ url: Blog4, description: 'tags and navigation', alt: 'tags and navigation' }
 						]}
 						logos={[
 							{ name: 'Next.js', url: Next },
 							{ name: 'Tailwind', url: Tailwind },
 							{ name: 'Typescript', url: Typescript }
 						]}
-						link=""
+						link="https://next-blog-template-kappa.vercel.app/"
 					/>
 					<Project
 						title="Ittero"
