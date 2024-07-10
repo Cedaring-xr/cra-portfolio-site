@@ -124,7 +124,7 @@ export default function ProjectsPage() {
 							{ name: 'Tailwind', url: Tailwind },
 							{ name: 'Typescript', url: Typescript }
 						]}
-						link="https://next-blog-template-git-main-matthew-rays-projects.vercel.app/"
+						link="https://www.radiantpine-devblog.com/"
 					/>
 					<Project
 						title="Ittero"
