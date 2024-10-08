@@ -73,7 +73,7 @@ export default function ProjectsPage() {
 							{ name: 'Playwright', url: Playwright },
 							{ name: 'S3', url: S3 }
 						]}
-						link="https://cedaring.art/"
+						link="https://cedaringvrart.com/"
 					/>
 					<Project
 						title="Raspberry Pi time lapse camera"
