@@ -71,7 +71,7 @@ const Header = () => {
 					</h4>
 				</a>
 			</div>
-			<nav className={`my-16 md:mr-24 lg:mr-24 xl:mr-48 ${stickyNav}`}>
+			<nav className={`my-8 md:mr-24 lg:mr-24 xl:mr-36 ${stickyNav}`}>
 				{size.width < breakpoint ? (
 					<>
 						<BiMenuAltRight
@@ -121,12 +121,12 @@ const Header = () => {
 						)}
 					</>
 				) : (
-					<ul className="flex flex-row gap-12 lg:gap-20 text-amber-600">
+					<ul className="flex flex-row gap-12 lg:gap-16 text-amber-600">
 						<li>
 							<button className={`border-b-2 border-black ${stickyButton}`}>
 								<a
 									href="/projects"
-									className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
+									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900"
 								>
 									Projects
 								</a>
@@ -136,7 +136,7 @@ const Header = () => {
 							<button className={`border-b-2 border-black ${stickyButton}`}>
 								<a
 									href="/resume"
-									className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
+									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900"
 								>
 									Resume
 								</a>
@@ -148,7 +148,7 @@ const Header = () => {
 									href="https://github.com/Cedaring-xr"
 									target="_blank"
 									rel="noreferrer"
-									className="text-xl md:text-2xl lg:text-3xl font-sans font-bold uppercase decoration-zinc-900"
+									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900"
 								>
 									GitHub
 								</a>

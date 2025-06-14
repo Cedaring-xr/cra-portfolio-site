@@ -17,6 +17,9 @@ import LandingPage from '../assets/landingPage.png'
 import Blog1 from '../assets/blog1.png'
 import Blog3 from '../assets/blog3.png'
 import Blog4 from '../assets/blog4.png'
+import RadiantPine1 from '../assets/radiantPine1.jpg'
+import RadiantPine2 from '../assets/radiantPine2.jpg'
+import RadiantPine3 from '../assets/radiantPine3.jpg'
 // logos
 import ThreeJs from '../assets/icons/Three.png'
 import ReactJS from '../assets/icons/react.png'
@@ -73,7 +76,7 @@ export default function ProjectsPage() {
 							{ name: 'Playwright', url: Playwright },
 							{ name: 'S3', url: S3 }
 						]}
-						link="https://cedaringvrart.com/"
+						link="https://d2ubvddn7k4zah.cloudfront.net/"
 					/>
 					<Project
 						title="Raspberry Pi time lapse camera"
@@ -145,9 +148,37 @@ export default function ProjectsPage() {
 							{ name: 'Dynamo', url: Dynamo },
 							{ name: 'Cognito', url: Cognito },
 							{ name: 'API gateway', url: ApiGateway },
-							{ name: 'Cypress', url: Cypress }
+							{ name: 'Playwright', url: Playwright }
 						]}
 						link=""
+					/>
+					<Project
+						title="Radiant Pine LLC"
+						description="Bussiness website for freelance web development and consultation"
+						pictures={[
+							{
+								url: RadiantPine1,
+								description: 'Radiant Pine landing page',
+								alt: 'Radiant Pine landing page'
+							},
+							{
+								url: RadiantPine2,
+								description: 'Radiant Pine services example',
+								alt: 'Radiant Pine services example'
+							},
+							{
+								url: RadiantPine3,
+								description: 'Radiant Pine about example',
+								alt: 'Radiant Pine about example'
+							}
+						]}
+						logos={[
+							{ name: 'Next.js', url: Next },
+							{ name: 'Tailwind', url: Tailwind },
+							{ name: 'Typescript', url: Typescript },
+							{ name: 'Amplify', url: Amplify }
+						]}
+						link="https://radiantpine.com"
 					/>
 				</div>
 			</div>
