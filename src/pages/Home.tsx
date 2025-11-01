@@ -17,7 +17,7 @@ export default function HomePage() {
 				</div>
 				<div className="flex flex-col lg:flex-row lg:gap-6 text-white lg:px-2 lg:max-w-[1600px] mx-auto lg:pt-12 px-4 pt-12">
 					<div className="p-3 rounded-lg mt-8 lg:w-1/3">
-						<h3 className="font-title font-bold text-xl text-amber-600">Programming background</h3>
+						<h3 className="font-title font-bold text-xl text-amber-600">Programming Background</h3>
 						<hr className="line-break" />
 						<p className="mt-4 indent-4">
 							I Started with a casual interest in web development back in 2014. Most of the programming I
@@ -35,7 +35,7 @@ export default function HomePage() {
 						</p>
 					</div>
 					<div className="p-3 rounded-lg mt-8 lg:w-1/3">
-						<h3 className="font-title font-bold text-xl text-amber-600">Hobbies and personal life</h3>
+						<h3 className="font-title font-bold text-xl text-amber-600">Hobbies and Free Time</h3>
 						<hr className="line-break" />
 						<p className="mt-4 indent-4">
 							Growing up and living in Colorado has brought me a great appreciation for nature and the
@@ -47,7 +47,7 @@ export default function HomePage() {
 						</p>
 					</div>
 					<div className="p-3 rounded-lg mt-8 lg:w-1/3">
-						<h3 className="font-title font-bold text-xl text-amber-600">Future Plans and projects</h3>
+						<h3 className="font-title font-bold text-xl text-amber-600">Future Plans and Projects</h3>
 						<hr className="line-break" />
 						<p className="mt-4 indent-4">
 							I plan to expand upon my current projects and build more side projects occasionally in my
@@ -60,6 +60,38 @@ export default function HomePage() {
 							creative coding. Building rich interactive 3D experiences for the web is a ton of fun and
 							extremely dynamic and unique. In the future I plan on diving more into ThreeJs, React3Fiber,
 							and creating more artistic stuff for the fun of it.
+						</p>
+					</div>
+				</div>
+				<div className="flex flex-col lg:flex-row lg:gap-6 text-white lg:px-2 lg:max-w-[1600px] mx-auto lg:pt-12 px-4 pt-12">
+					<div className="p-3 rounded-lg mt-8 lg:w-1/3">
+						<h3 className="font-title font-bold text-xl text-amber-600">Personal Life</h3>
+						<hr className="line-break" />
+						<p className="mt-4 indent-4">
+							I Started with a casual interest in web development back in 2014. Most of the programming I
+							have done over the years is self taught following videos and tutorials through online
+							learning resources. I did go through a coding bootcamp back in 2015 for full stack
+							development, but found it to be lacking in content and detailed explanations. After that, I
+							worked as a QA engineer for several years writing automation test suites and performing
+							testing on web applications for a variety of different companies.
+						</p>
+						<p className="indent-4 mt-2">
+							As I progress, I would like to transition out of QA testing and back into feature creation
+							and contributing to application development in a more meaningful way. I value the testing
+							mindset that I have gained and want to apply the focus on quality to other aspects of the
+							development process.
+						</p>
+					</div>
+					<div className="p-3 rounded-lg mt-8 lg:w-1/3">
+						<h3 className="font-title font-bold text-xl text-amber-600">QA philosophy</h3>
+						<hr className="line-break" />
+						<p className="mt-4 indent-4">
+							Growing up and living in Colorado has brought me a great appreciation for nature and the
+							outdoors. I try to find a good balance between technology/computer work and spending time
+							outside. My main outdoor hobby is rock climbing. It has been a big part of my life for many
+							years. I have spent a lot of time traveling and climbing around the western US. Aside from
+							rock climbing, I also started to get into mountain biking and nordic skiing. Learning new
+							activities is always a fun experience.
 						</p>
 					</div>
 				</div>
