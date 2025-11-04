@@ -1,41 +1,20 @@
 import Project from '../components/Project'
-import RC1 from '../assets/RC1.png'
-import RC2 from '../assets/RC2.png'
-import RC3 from '../assets/RC3.png'
-import art1 from '../assets/Art1.png'
-import art2 from '../assets/Art2.png'
-import art3 from '../assets/Art3.png'
-import EW1 from '../assets/EW1.png'
-import EW2 from '../assets/EW2.png'
-import EW3 from '../assets/EW3.png'
-import PiCamera1 from '../assets/piCamera2.png'
-import PiCamera2 from '../assets/timelapse1.png'
-import PiCamera3 from '../assets/timeLapse3.png'
-import Journal from '../assets/journal.png'
-import Infinity from '../assets/infinity2.png'
-import LandingPage from '../assets/landingPage.png'
-import Blog1 from '../assets/blog1.png'
-import Blog3 from '../assets/blog3.png'
-import Blog4 from '../assets/blog4.png'
-import RadiantPine1 from '../assets/radiantPine1.jpg'
-import RadiantPine2 from '../assets/radiantPine2.jpg'
-import RadiantPine3 from '../assets/radiantPine3.jpg'
 // logos
-import ThreeJs from '../assets/icons/Three.png'
-import ReactJS from '../assets/icons/react.png'
-import Tailwind from '../assets/icons/tailwind.png'
-import Typescript from '../assets/icons/typescript.png'
-import Jest from '../assets/icons/jest.png'
-import Playwright from '../assets/icons/playwright.png'
-import S3 from '../assets/icons/S3.png'
-import Amplify from '../assets/icons/amplify.png'
-import Lambda from '../assets/icons/lambda.png'
-import Python from '../assets/icons/python.png'
-import Next from '../assets/icons/nextJS.png'
-import Dynamo from '../assets/icons/dynamo.png'
-import Cognito from '../assets/icons/cognito.png'
-import ApiGateway from '../assets/icons/APIgateway.png'
-import Cypress from '../assets/icons/cypress.png'
+const ThreeJs = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/Three.png'
+const ReactJS = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/react.png'
+const Tailwind = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/tailwind.png'
+const Typescript = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/typescript.png'
+const Jest = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/jest.png'
+const Playwright = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/playwright.png'
+const S3 = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/S3.png'
+const Amplify = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/amplify.png'
+const Lambda = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/lambda.png'
+const Python = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/python.png'
+const Next = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/nextJS.png'
+const Dynamo = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/dynamo.png'
+const Cognito = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/cognito.png'
+const ApiGateway = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/APIgateway.png'
+const Cypress = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/cypress.png'
 
 export default function ProjectsPage() {
 	return (
@@ -50,15 +29,28 @@ export default function ProjectsPage() {
 						title="Elevation Weather App"
 						description="Simple weather application that can search for current weather based on city location or elevation"
 						pictures={[
-							{ url: EW1, description: 'weather landing page', alt: 'weather landing page screen' },
-							{ url: EW2, description: 'hot weather result', alt: 'weather display for warm climate' },
-							{ url: EW3, description: 'elevation example', alt: 'weather display on elevation page' }
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW1.png',
+								description: 'weather landing page',
+								alt: 'weather landing page screen'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW2.png',
+								description: 'hot weather result',
+								alt: 'weather display for warm climate'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW3.png',
+								description: 'elevation example',
+								alt: 'weather display on elevation page'
+							}
 						]}
 						logos={[
 							{ name: 'React', url: ReactJS },
 							{ name: 'Tailwind', url: Tailwind },
 							{ name: 'Amplify', url: Amplify },
-							{ name: 'Typescript', url: Typescript }
+							{ name: 'Typescript', url: Typescript },
+							{ name: 'Cypress', url: Cypress }
 						]}
 						link="https://dev.dr7t8my3rq95b.amplifyapp.com/"
 					/>
@@ -66,9 +58,21 @@ export default function ProjectsPage() {
 						title="Cedaring VR Art Showcase"
 						description="Learning ThreeJS and 3D web development basics in order to display artwork created in VR and create more dynamic and interesting web experiences"
 						pictures={[
-							{ url: art1, description: 'Cedaring art scenes', alt: 'Cedaring art scenes' },
-							{ url: art2, description: 'art modal', alt: 'art modal' },
-							{ url: art3, description: 'cedaring homepage', alt: 'Cedaring homepage' }
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art1.png',
+								description: 'Cedaring art scenes',
+								alt: 'Cedaring art scenes'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art2.png',
+								description: 'art modal',
+								alt: 'art modal'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art3.png',
+								description: 'cedaring homepage',
+								alt: 'Cedaring homepage'
+							}
 						]}
 						logos={[
 							{ name: 'React', url: ReactJS },
@@ -82,10 +86,18 @@ export default function ProjectsPage() {
 						title="Raspberry Pi time lapse camera"
 						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running Lambda functions to process pictures. Final output is displayed in an amplify website"
 						pictures={[
-							{ url: PiCamera1, description: 'camera setup', alt: 'camera setup' },
-							{ url: PiCamera2, description: 'landing page for website', alt: 'website landing page' },
 							{
-								url: PiCamera3,
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/piCamera2.png',
+								description: 'camera setup',
+								alt: 'camera setup'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/timelapse1.png',
+								description: 'landing page for website',
+								alt: 'website landing page'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/timeLapse3.png',
 								description: 'slideshow display',
 								alt: 'slideshow display section'
 							}
@@ -102,9 +114,21 @@ export default function ProjectsPage() {
 						title="React Component Practice"
 						description="Building commonly used and interesting web components for practice with React, Typescript, and unit testsing"
 						pictures={[
-							{ url: RC1, description: 'examples of react components', alt: 'example image' },
-							{ url: RC2, description: 'examples of react components', alt: 'example image' },
-							{ url: RC3, description: 'examples of react components', alt: 'example image' }
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC1.png',
+								description: 'examples of react components',
+								alt: 'example image'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC2.png',
+								description: 'examples of react components',
+								alt: 'example image'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC3.png',
+								description: 'examples of react components',
+								alt: 'example image'
+							}
 						]}
 						logos={[
 							{ name: 'React', url: ReactJS },
@@ -118,9 +142,21 @@ export default function ProjectsPage() {
 						title="Development Blog"
 						description="Personal Blog about development, coding, and interacting with cloud architecture"
 						pictures={[
-							{ url: Blog1, description: 'blog homepage', alt: 'blog homepage' },
-							{ url: Blog3, description: 'example blog post content', alt: 'blog content' },
-							{ url: Blog4, description: 'tags and navigation', alt: 'tags and navigation' }
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog1.png',
+								description: 'blog homepage',
+								alt: 'blog homepage'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog3.png',
+								description: 'example blog post content',
+								alt: 'blog content'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog4.png',
+								description: 'tags and navigation',
+								alt: 'tags and navigation'
+							}
 						]}
 						logos={[
 							{ name: 'Next.js', url: Next },
@@ -133,10 +169,18 @@ export default function ProjectsPage() {
 						title="Ittero"
 						description="Full stack list creation, productivity tracker, quick journal, and feedback for continuous improvement"
 						pictures={[
-							{ url: Journal, description: 'writing journal', alt: 'writing journal' },
-							{ url: Infinity, description: 'website logo with background', alt: 'website logo' },
 							{
-								url: LandingPage,
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/journal.png',
+								description: 'writing journal',
+								alt: 'writing journal'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/infinity2.png',
+								description: 'website logo with background',
+								alt: 'website logo'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/landingPage.png',
 								description: 'website homepage',
 								alt: 'website homepage'
 							}
@@ -157,17 +201,17 @@ export default function ProjectsPage() {
 						description="Bussiness website for freelance web development and consultation"
 						pictures={[
 							{
-								url: RadiantPine1,
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/radiantPine1.jpg',
 								description: 'Radiant Pine landing page',
 								alt: 'Radiant Pine landing page'
 							},
 							{
-								url: RadiantPine2,
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/radiantPine2.jpg',
 								description: 'Radiant Pine services example',
 								alt: 'Radiant Pine services example'
 							},
 							{
-								url: RadiantPine3,
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/radiantPine3.jpg',
 								description: 'Radiant Pine about example',
 								alt: 'Radiant Pine about example'
 							}
