@@ -18,7 +18,7 @@ type ProjectProps = {
 const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, link }) => {
 	return (
 		<div className="p-2 my-8 mx-2 w-[380px] flex flex-col items-center border-2 border-black rounded-xl bg-zinc-800 text-white">
-			<h2 className="font-title text-2xl font-bold my-2">{title}</h2>
+			<h2 className="font-title text-xl font-bold my-2">{title}</h2>
 			<ImageSlider pictures={pictures} />
 			<span className="m-2 text-white">{description}</span>
 

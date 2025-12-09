@@ -75,15 +75,15 @@ const Header = () => {
 				{size.width < breakpoint ? (
 					<>
 						<BiMenuAltRight
-							className={`text-7xl text-amber-600 -mt-5 ${stickyMobile}`}
+							className={`text-6xl text-amber-600 -mt-5 ${stickyMobile}`}
 							onClick={menuToggleOpen}
 						/>
 						{menuOpen && (
 							<div className="fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-6">
 								<a href="/">
-									<h1 className={`text-2xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
+									<h1 className={`text-3xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
 								</a>
-								<ul className="flex flex-col justify-center items-center text-4xl gap-6">
+								<ul className="flex flex-col justify-center items-center text-3xl gap-6 mt-12">
 									<li>
 										<AiOutlineClose
 											onClick={menuToggleOpen}
@@ -126,7 +126,7 @@ const Header = () => {
 							<button className={`border-b-2 border-black ${stickyButton}`}>
 								<a
 									href="/projects"
-									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900"
+									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
 								>
 									Projects
 								</a>
@@ -136,7 +136,7 @@ const Header = () => {
 							<button className={`border-b-2 border-black ${stickyButton}`}>
 								<a
 									href="/resume"
-									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900"
+									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
 								>
 									Resume
 								</a>
@@ -148,7 +148,7 @@ const Header = () => {
 									href="https://github.com/Cedaring-xr"
 									target="_blank"
 									rel="noreferrer"
-									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900"
+									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
 								>
 									GitHub
 								</a>
