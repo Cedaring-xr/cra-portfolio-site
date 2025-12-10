@@ -56,7 +56,7 @@ export default function ProjectsPage() {
 							{ name: 'Typescript', url: Typescript },
 							{ name: 'Cypress', url: Cypress }
 						]}
-						link="https://dev.dr7t8my3rq95b.amplifyapp.com/"
+						link="https://staging.d18q2isx69j0by.amplifyapp.com/"
 					/>
 					<Project
 						title="Cedaring VR Art Showcase"
