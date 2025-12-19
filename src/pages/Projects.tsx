@@ -18,6 +18,7 @@ const Cypress = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio
 const Aurora = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/Aurora.jpg'
 const Markdown = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/markdown.jpg'
 const SMS = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/sms.png'
+const SNS = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/SNS.jpg'
 const Rekognition = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/rekognition.png'
 
 export default function ProjectsPage() {
@@ -115,7 +116,8 @@ export default function ProjectsPage() {
 							{ name: 'API gateway', url: ApiGateway },
 							{ name: 'Lambda', url: Lambda },
 							{ name: 'RDS Aurora', url: Aurora },
-							{ name: 'Playwright', url: Playwright }
+							{ name: 'Playwright', url: Playwright },
+							{ name: 'SNS', url: SNS }
 						]}
 						link="https://www.itteroapp.com"
 					/>
@@ -256,7 +258,7 @@ export default function ProjectsPage() {
 							{ name: 'Typescript', url: Typescript },
 							{ name: 'Tailwind', url: Tailwind },
 							{ name: 'Rekognition', url: Rekognition },
-							{ name: 'SMS', url: SMS }
+							{ name: 'SMS', url: SNS }
 						]}
 						link=""
 					/>
