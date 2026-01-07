@@ -14,7 +14,7 @@ export default function PageRoutes() {
 				<Route path="/projects" element={<ProjectsPage />} />
 				<Route path="/resume" element={<ResumePage />} />
 			</Routes>
-			<Footer date="Nov. 2025" />
+			<Footer date="Jan. 2026" />
 		</Router>
 	)
 }

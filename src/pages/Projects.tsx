@@ -17,9 +17,9 @@ const ApiGateway = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfo
 const Cypress = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/cypress.png'
 const Aurora = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/Aurora.jpg'
 const Markdown = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/markdown.jpg'
-const SMS = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/sms.png'
 const SNS = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/SNS.jpg'
 const Rekognition = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/rekognition.png'
+const CodePipeline = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/codePipeline.jpg'
 
 export default function ProjectsPage() {
 	return (
@@ -117,7 +117,8 @@ export default function ProjectsPage() {
 							{ name: 'Lambda', url: Lambda },
 							{ name: 'RDS Aurora', url: Aurora },
 							{ name: 'Playwright', url: Playwright },
-							{ name: 'SNS', url: SNS }
+							{ name: 'SNS', url: SNS },
+							{ name: 'Code Pipeline', url: CodePipeline }
 						]}
 						link="https://www.itteroapp.com"
 					/>
