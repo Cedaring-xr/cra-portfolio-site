@@ -58,6 +58,7 @@ export default function ProjectsPage() {
 							{ name: 'Cypress', url: Cypress }
 						]}
 						link="https://staging.d18q2isx69j0by.amplifyapp.com/"
+						testPlan=""
 					/>
 					<Project
 						title="Cedaring VR Art Showcase"
@@ -86,6 +87,7 @@ export default function ProjectsPage() {
 							{ name: 'S3', url: S3 }
 						]}
 						link="https://d2ubvddn7k4zah.cloudfront.net/"
+						testPlan=""
 					/>
 					<Project
 						title="Ittero"
@@ -121,6 +123,7 @@ export default function ProjectsPage() {
 							{ name: 'Code Pipeline', url: CodePipeline }
 						]}
 						link="https://www.itteroapp.com"
+						testPlan="/ItteroTestPlan"
 					/>
 					<Project
 						title="Raspberry Pi time lapse camera"
@@ -149,6 +152,7 @@ export default function ProjectsPage() {
 							{ name: 'Amplify', url: Amplify }
 						]}
 						link="https://main.d2zforex81luny.amplifyapp.com/"
+						testPlan=""
 					/>
 					<Project
 						title="Development Blog"
@@ -177,6 +181,7 @@ export default function ProjectsPage() {
 							{ name: 'Markdown', url: Markdown }
 						]}
 						link="https://www.radiantpine-devblog.com/"
+						testPlan=""
 					/>
 					<Project
 						title="React Component Practice"
@@ -205,6 +210,7 @@ export default function ProjectsPage() {
 							{ name: 'Jest', url: Jest }
 						]}
 						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
+						testPlan=""
 					/>
 					<Project
 						title="Radiant Pine LLC"
@@ -233,6 +239,7 @@ export default function ProjectsPage() {
 							{ name: 'Amplify', url: Amplify }
 						]}
 						link="https://radiantpine.com"
+						testPlan=""
 					/>
 					<Project
 						title="climbSafe Vision"
@@ -262,6 +269,7 @@ export default function ProjectsPage() {
 							{ name: 'SMS', url: SNS }
 						]}
 						link=""
+						testPlan="/climbSafeTestPlan"
 					/>
 				</div>
 			</div>
