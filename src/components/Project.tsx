@@ -13,9 +13,10 @@ type ProjectProps = {
 		url: string
 	}[]
 	link: string
+	testPlan: string
 }
 
-const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, link }) => {
+const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, link, testPlan }) => {
 	return (
 		<div className="p-2 my-8 mx-2 w-[380px] flex flex-col items-center border-2 border-black rounded-xl bg-zinc-800 text-white">
 			<h2 className="font-title text-xl font-bold my-2">{title}</h2>
@@ -35,6 +36,17 @@ const Project: React.FC<ProjectProps> = ({ title, description, pictures, logos, 
 				<button className="button mx-16 my-4 bg-zinc-400 text-black cursor-default">
 					Currently Unavailable
 				</button>
+			)}
+			{testPlan.length > 1 ? (
+				<a
+					className="button mx-16 my-4 bg-amber-600 hover:bg-amber-500 text-black hover:scale-105"
+					href={testPlan}
+					rel="noreferrer"
+				>
+					View Test Strategy
+				</a>
+			) : (
+				<></>
 			)}
 			<div>
 				<span className="font-title font-bold text-white">Tech Stack</span>
