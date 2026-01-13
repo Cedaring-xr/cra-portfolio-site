@@ -184,35 +184,6 @@ export default function ProjectsPage() {
 						testPlan=""
 					/>
 					<Project
-						title="React Component Practice"
-						description="Building commonly used and interesting web components for practice with React, Typescript, and unit testsing."
-						pictures={[
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC1.png',
-								description: 'examples of react components',
-								alt: 'example image'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC2.png',
-								description: 'examples of react components',
-								alt: 'example image'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC3.png',
-								description: 'examples of react components',
-								alt: 'example image'
-							}
-						]}
-						logos={[
-							{ name: 'React', url: ReactJS },
-							{ name: 'Tailwind', url: Tailwind },
-							{ name: 'Typescript', url: Typescript },
-							{ name: 'Jest', url: Jest }
-						]}
-						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
-						testPlan=""
-					/>
-					<Project
 						title="Radiant Pine LLC"
 						description="Bussiness website for freelance web development and consultation. An elegant static site with SVG elements, contact form, and reusable components"
 						pictures={[
@@ -239,6 +210,35 @@ export default function ProjectsPage() {
 							{ name: 'Amplify', url: Amplify }
 						]}
 						link="https://radiantpine.com"
+						testPlan=""
+					/>
+					<Project
+						title="React Component Practice"
+						description="Building commonly used and interesting web components for practice with React, Typescript, and unit testsing."
+						pictures={[
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC1.png',
+								description: 'examples of react components',
+								alt: 'example image'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC2.png',
+								description: 'examples of react components',
+								alt: 'example image'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/RC3.png',
+								description: 'examples of react components',
+								alt: 'example image'
+							}
+						]}
+						logos={[
+							{ name: 'React', url: ReactJS },
+							{ name: 'Tailwind', url: Tailwind },
+							{ name: 'Typescript', url: Typescript },
+							{ name: 'Jest', url: Jest }
+						]}
+						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
 						testPlan=""
 					/>
 					<Project
