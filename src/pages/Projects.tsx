@@ -20,75 +20,18 @@ const Markdown = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfoli
 const SNS = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/SNS.jpg'
 const Rekognition = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/rekognition.png'
 const CodePipeline = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/codePipeline.jpg'
+const Vite = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/icons/vite.png'
 
 export default function ProjectsPage() {
 	return (
 		<>
 			<div className="bg-transparent md:background mt-[180px]">
-				<h2 className="font-title text-2xl lg:text-3xl text-center font-bold">Personal Coding Projects</h2>
+				<h1 className="font-title text-2xl lg:text-3xl text-center font-bold">Personal Coding Projects</h1>
+				<h2>Most Recent Projects</h2>
 				<div
 					id="projects-container"
 					className="flex flex-row gap-8 flex-wrap md:max-w-[1400px] mx-auto justify-center"
 				>
-					<Project
-						title="Elevation Weather App"
-						description="Simple weather application that can search for current weather based on city location or elevation. Built for practice consuming public API data and working with Typescript. Elevation data is all based on cities around Colorado."
-						pictures={[
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW1.png',
-								description: 'weather landing page',
-								alt: 'weather landing page screen'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW2.png',
-								description: 'hot weather result',
-								alt: 'weather display for warm climate'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW3.png',
-								description: 'elevation example',
-								alt: 'weather display on elevation page'
-							}
-						]}
-						logos={[
-							{ name: 'React', url: ReactJS },
-							{ name: 'Tailwind', url: Tailwind },
-							{ name: 'Amplify', url: Amplify },
-							{ name: 'Typescript', url: Typescript },
-							{ name: 'Cypress', url: Cypress }
-						]}
-						link="https://staging.d18q2isx69j0by.amplifyapp.com/"
-						testPlan=""
-					/>
-					<Project
-						title="Cedaring VR Art Showcase"
-						description="Learning ThreeJS and 3D web development basics in order to display artwork created in VR and create more dynamic and interesting web experiences"
-						pictures={[
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art1.png',
-								description: 'Cedaring art scenes',
-								alt: 'Cedaring art scenes'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art2.png',
-								description: 'art modal',
-								alt: 'art modal'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art3.png',
-								description: 'cedaring homepage',
-								alt: 'Cedaring homepage'
-							}
-						]}
-						logos={[
-							{ name: 'React', url: ReactJS },
-							{ name: 'ThreeJS', url: ThreeJs },
-							{ name: 'Playwright', url: Playwright },
-							{ name: 'S3', url: S3 }
-						]}
-						link="https://d2ubvddn7k4zah.cloudfront.net/"
-						testPlan=""
-					/>
 					<Project
 						title="Ittero"
 						description="Full stack list creation, productivity tracker, quick journal, and feedback application. Extensive testing with Playwright. Will extend and continue to add feature over time."
@@ -126,61 +69,93 @@ export default function ProjectsPage() {
 						testPlan="/ItteroTestPlan"
 					/>
 					<Project
-						title="Raspberry Pi time lapse camera"
-						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running Lambda functions to process pictures. Final output is displayed in an amplify website. Build for practice with some basic AWS cloud architecture."
+						title="QA stats Dashboard"
+						description="Single page test run statistics populated by CI test runs for several projects"
 						pictures={[
 							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/piCamera2.png',
-								description: 'camera setup',
-								alt: 'camera setup'
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/qaDash1.png',
+								description: 'Test Runs Summary',
+								alt: 'dashboard'
 							},
 							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/timelapse1.png',
-								description: 'landing page for website',
-								alt: 'website landing page'
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/qaDash2.png',
+								description: 'Test Results Overview',
+								alt: 'test results'
 							},
 							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/timeLapse3.png',
-								description: 'slideshow display',
-								alt: 'slideshow display section'
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/qaDash3.png',
+								description: 'Test Pyramid',
+								alt: 'test pyramid'
 							}
 						]}
 						logos={[
-							{ name: 'Python', url: Python },
+							{ name: 'Vite', url: Vite },
 							{ name: 'S3', url: S3 },
-							{ name: 'Lambda', url: Lambda },
-							{ name: 'Amplify', url: Amplify }
+							{ name: 'Amplify', url: Amplify },
+							{ name: 'Typescript', url: Typescript }
 						]}
-						link="https://main.d2zforex81luny.amplifyapp.com/"
+						link="https://main.dhy42jph43zbk.amplifyapp.com/"
 						testPlan=""
 					/>
 					<Project
-						title="Development Blog"
-						description="Personal Blog about development, coding, and interacting with cloud architecture. Uses posts written in markdown. Switched to LLC branding. Will add more posts over time."
+						title="climbSafe Vision"
+						description="Live feed video processing with AWS Rekognition and real-time alerts. Trained on custom data to detect safety concerns at a climbing wall facility. Once issues are detected an AWS alert is triggered and a alert message is sent to on-site devices."
 						pictures={[
 							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog1.png',
-								description: 'blog homepage',
-								alt: 'blog homepage'
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/cameraVision.png',
+								description: 'camera vision of climbing wall',
+								alt: 'climbing wall image'
 							},
 							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog3.png',
-								description: 'example blog post content',
-								alt: 'blog content'
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/camera.jpg',
+								description: 'camera setup with Rpi-4',
+								alt: 'camera and connected devices'
 							},
 							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog4.png',
-								description: 'tags and navigation',
-								alt: 'tags and navigation'
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/landingPage.png',
+								description: 'ClimbSafe Vision landing page template',
+								alt: 'landing page for application'
 							}
 						]}
 						logos={[
 							{ name: 'Next.js', url: Next },
 							{ name: 'Typescript', url: Typescript },
 							{ name: 'Tailwind', url: Tailwind },
-							{ name: 'Markdown', url: Markdown }
+							{ name: 'Rekognition', url: Rekognition },
+							{ name: 'SMS', url: SNS }
 						]}
-						link="https://www.radiantpine-devblog.com/"
+						link=""
+						testPlan="/climbSafeTestPlan"
+					/>
+					<h2>Older Projects</h2>
+					<Project
+						title="Elevation Weather App"
+						description="Simple weather application that can search for current weather based on city location or elevation. Built for practice consuming public API data and working with Typescript. Elevation data is all based on cities around Colorado."
+						pictures={[
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW1.png',
+								description: 'weather landing page',
+								alt: 'weather landing page screen'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW2.png',
+								description: 'hot weather result',
+								alt: 'weather display for warm climate'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/EW3.png',
+								description: 'elevation example',
+								alt: 'weather display on elevation page'
+							}
+						]}
+						logos={[
+							{ name: 'React', url: ReactJS },
+							{ name: 'Tailwind', url: Tailwind },
+							{ name: 'Amplify', url: Amplify },
+							{ name: 'Typescript', url: Typescript },
+							{ name: 'Cypress', url: Cypress }
+						]}
+						link="https://staging.d18q2isx69j0by.amplifyapp.com/"
 						testPlan=""
 					/>
 					<Project
@@ -213,6 +188,95 @@ export default function ProjectsPage() {
 						testPlan=""
 					/>
 					<Project
+						title="Cedaring VR Art Showcase"
+						description="Learning ThreeJS and 3D web development basics in order to display artwork created in VR and create more dynamic and interesting web experiences"
+						pictures={[
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art1.png',
+								description: 'Cedaring art scenes',
+								alt: 'Cedaring art scenes'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art2.png',
+								description: 'art modal',
+								alt: 'art modal'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art3.png',
+								description: 'cedaring homepage',
+								alt: 'Cedaring homepage'
+							}
+						]}
+						logos={[
+							{ name: 'React', url: ReactJS },
+							{ name: 'ThreeJS', url: ThreeJs },
+							{ name: 'Playwright', url: Playwright },
+							{ name: 'S3', url: S3 }
+						]}
+						link="https://d2ubvddn7k4zah.cloudfront.net/"
+						testPlan=""
+					/>
+					<Project
+						title="Development Blog"
+						description="Personal Blog about development, coding, and interacting with cloud architecture. Uses posts written in markdown. Switched to LLC branding. Will add more posts over time."
+						pictures={[
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog1.png',
+								description: 'blog homepage',
+								alt: 'blog homepage'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog3.png',
+								description: 'example blog post content',
+								alt: 'blog content'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/blog4.png',
+								description: 'tags and navigation',
+								alt: 'tags and navigation'
+							}
+						]}
+						logos={[
+							{ name: 'Next.js', url: Next },
+							{ name: 'Typescript', url: Typescript },
+							{ name: 'Tailwind', url: Tailwind },
+							{ name: 'Markdown', url: Markdown }
+						]}
+						link="https://www.radiantpine-devblog.com/"
+						testPlan=""
+					/>
+
+					<Project
+						title="Raspberry Pi time lapse camera"
+						description="Using a Raspberry Pi to take timelapse pictures, uploading pictures to S3 then running Lambda functions to process pictures. Final output is displayed in an amplify website. Build for practice with some basic AWS cloud architecture."
+						pictures={[
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/piCamera2.png',
+								description: 'camera setup',
+								alt: 'camera setup'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/timelapse1.png',
+								description: 'landing page for website',
+								alt: 'website landing page'
+							},
+							{
+								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/timeLapse3.png',
+								description: 'slideshow display',
+								alt: 'slideshow display section'
+							}
+						]}
+						logos={[
+							{ name: 'Python', url: Python },
+							{ name: 'S3', url: S3 },
+							{ name: 'Lambda', url: Lambda },
+							{ name: 'Amplify', url: Amplify }
+						]}
+						link="https://main.d2zforex81luny.amplifyapp.com/"
+						testPlan=""
+					/>
+
+					<Project
 						title="React Component Practice"
 						description="Building commonly used and interesting web components for practice with React, Typescript, and unit testsing."
 						pictures={[
@@ -240,36 +304,6 @@ export default function ProjectsPage() {
 						]}
 						link="https://main.d1x2x77vkbyrf2.amplifyapp.com/"
 						testPlan=""
-					/>
-					<Project
-						title="climbSafe Vision"
-						description="Live feed video processing with AWS Rekognition and real-time alerts. Trained on custom data to detect safety concerns at a climbing wall facility. Once issues are detected an AWS alert is triggered and a alert message is sent to on-site devices."
-						pictures={[
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/cameraVision.png',
-								description: 'camera vision of climbing wall',
-								alt: 'climbing wall image'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/camera.jpg',
-								description: 'camera setup with Rpi-4',
-								alt: 'camera and connected devices'
-							},
-							{
-								url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/landingPage.png',
-								description: 'ClimbSafe Vision landing page template',
-								alt: 'landing page for application'
-							}
-						]}
-						logos={[
-							{ name: 'Next.js', url: Next },
-							{ name: 'Typescript', url: Typescript },
-							{ name: 'Tailwind', url: Tailwind },
-							{ name: 'Rekognition', url: Rekognition },
-							{ name: 'SMS', url: SNS }
-						]}
-						link=""
-						testPlan="/climbSafeTestPlan"
 					/>
 				</div>
 			</div>
