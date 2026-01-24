@@ -50,6 +50,11 @@
 			background-size: 140%;
 		}
 	}
+	@media screen and (min-width: 601px) and (max-width: 950px) {
+		.background {
+			background-size: 110%;
+		}
+	}
 
 	.header-active {
 		background-color: rgb(34, 34, 34);

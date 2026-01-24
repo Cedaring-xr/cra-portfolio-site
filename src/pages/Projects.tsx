@@ -77,7 +77,7 @@ export default function ProjectsPage() {
 								{ name: 'SNS', url: SNS },
 								{ name: 'Code Pipeline', url: CodePipeline }
 							]}
-							link="https://www.itteroapp.com"
+							link="https://itteroapp.com"
 							testPlan="/ItteroTestPlan"
 							architectureDiagram="https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Ittero+Architecture.drawio.png"
 						/>

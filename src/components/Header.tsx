@@ -60,7 +60,7 @@ const Header = () => {
 	}, [size.width])
 
 	const stickyHeader = isSticky && 'sticky bg-zinc-950 transition ease-in-out duration-500  -mt-16'
-	const stickyTitle = isSticky && 'mt-3 text-white text-2xl lg:text-[2.1rem]'
+	const stickyTitle = isSticky && '!mt-2 text-white text-2xl lg:text-[2.1rem]'
 	const stickySubtitle = isSticky && 'hidden'
 	const stickyNav = isSticky && 'mt-3'
 	const stickyButton = isSticky && 'border-none'
@@ -73,7 +73,9 @@ const Header = () => {
 		>
 			<div className="min-w-[250px]">
 				<a href="/">
-					<h1 className={`text-2xl md:text-3xl lg:text-5xl text-black font-bold mt-12 ml-6 ${stickyTitle}`}>
+					<h1
+						className={`text-2xl md:text-3xl lg:text-4xl text-black font-bold mt-4 md:mt-8 ml-6 ${stickyTitle}`}
+					>
 						Matt Ray Dev Portfolio
 					</h1>
 					<h4
@@ -83,25 +85,29 @@ const Header = () => {
 					</h4>
 				</a>
 			</div>
-			<nav className={`my-8 md:mr-24 lg:mr-24 xl:mr-36 ${stickyNav}`}>
+			<nav className={`my-8 ${stickyNav}`}>
 				{size.width < breakpoint ? (
-					<>
+					<div className="mr-4">
 						<BiMenuAltRight
 							className={`text-6xl text-amber-600 -mt-5 ${stickyMobile}`}
 							onClick={menuToggleOpen}
 						/>
 						{menuOpen && (
-							<div className={`fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-6 ${isClosing ? 'mobile-menu-exit' : 'mobile-menu-enter'}`}>
-								<a href="/">
-									<h1 className={`text-3xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
-								</a>
-								<ul className="flex flex-col justify-center items-center text-3xl gap-6 mt-12">
-									<li>
-										<AiOutlineClose
-											onClick={menuToggleOpen}
-											className="absolute right-10 hover:text-amber-600 top-6"
-										/>
-									</li>
+							<div
+								className={`fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-4 ${isClosing ? 'mobile-menu-exit' : 'mobile-menu-enter'}`}
+							>
+								<div className="flex justify-between items-center px-4 mb-12">
+									<a href="/">
+										<h1 className={`text-xl sm:text-2xl text-amber-600 font-bold`}>
+											Matt Ray Dev Portfolio
+										</h1>
+									</a>
+									<AiOutlineClose
+										onClick={menuToggleOpen}
+										className="text-3xl hover:text-amber-600 cursor-pointer flex-shrink-0 ml-2 mr-2"
+									/>
+								</div>
+								<ul className="flex flex-col justify-center items-center text-3xl gap-8">
 									<li className="hover:text-amber-600 mobile-menu-item">
 										<button>
 											<a href="/projects" className="">
@@ -131,42 +137,44 @@ const Header = () => {
 								</ul>
 							</div>
 						)}
-					</>
+					</div>
 				) : (
-					<ul className="flex flex-row gap-12 lg:gap-16 text-amber-600">
-						<li>
-							<button className={`border-b-2 border-black ${stickyButton}`}>
-								<a
-									href="/projects"
-									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
-								>
-									Projects
-								</a>
-							</button>
-						</li>
-						<li>
-							<button className={`border-b-2 border-black ${stickyButton}`}>
-								<a
-									href="/resume"
-									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
-								>
-									Resume
-								</a>
-							</button>
-						</li>
-						<li>
-							<button className={`border-b-2 border-black ${stickyButton}`}>
-								<a
-									href="https://github.com/Cedaring-xr"
-									target="_blank"
-									rel="noreferrer"
-									className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
-								>
-									GitHub
-								</a>
-							</button>
-						</li>
-					</ul>
+					<div className="mr-24 lg:mr-24 xl:mr-36">
+						<ul className="flex flex-row gap-12 lg:gap-16 text-amber-600">
+							<li>
+								<button className={`border-b-2 border-black ${stickyButton}`}>
+									<a
+										href="/projects"
+										className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
+									>
+										Projects
+									</a>
+								</button>
+							</li>
+							<li>
+								<button className={`border-b-2 border-black ${stickyButton}`}>
+									<a
+										href="/resume"
+										className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
+									>
+										Resume
+									</a>
+								</button>
+							</li>
+							<li>
+								<button className={`border-b-2 border-black ${stickyButton}`}>
+									<a
+										href="https://github.com/Cedaring-xr"
+										target="_blank"
+										rel="noreferrer"
+										className="text-xl md:text-2xl font-sans font-bold uppercase decoration-zinc-900 hover:text-zinc-700 transition shadow hover:shadow-xl"
+									>
+										GitHub
+									</a>
+								</button>
+							</li>
+						</ul>
+					</div>
 				)}
 			</nav>
 		</div>
