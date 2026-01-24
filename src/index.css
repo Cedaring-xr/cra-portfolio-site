@@ -40,7 +40,7 @@
 		font-family: 'Rubik', sans-serif;
 	}
 	.background {
-		background-image: url('assets/whiteBackgroundMountains.webp');
+		background-image: url('https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/whiteBackgroundMountains.webp');
 		background-size: 80%;
 		background-repeat: no-repeat;
 		background-position: center;
