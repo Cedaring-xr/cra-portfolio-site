@@ -27,16 +27,18 @@ export default function ProjectsPage() {
 	return (
 		<>
 			<div className="bg-transparent md:background mt-[180px]">
-				<h1 className="font-title text-2xl lg:text-3xl text-center font-bold mb-12">
+				<h1 className="font-title text-2xl lg:text-3xl text-center font-bold mb-24">
 					Personal Coding Projects
 				</h1>
 
 				{/* Most Recent Projects Section */}
 				<div className="mb-16">
-					<div className="flex justify-center mb-8">
-						<h2 className="font-title text-xl lg:text-2xl font-bold px-8 py-4 bg-zinc-800 text-amber-500 rounded-lg shadow-lg">
-							Most Recent Projects
-						</h2>
+					<div className="bg-zinc-800 w-[90%] md:w-[70% lg:w-[60%] mx-auto h-10 pt-1 rounded-full overflow-hidden">
+						<div className="border-b-2 border-amber-600 relative w-[95%] mx-auto mb-8">
+							<h2 className="sans-font text-2xl font-bold bg-zinc-800 text-amber-600 text-center mx-auto -mb-4 w-fit px-4">
+								Most Recent Projects
+							</h2>
+						</div>
 					</div>
 					<div
 						id="recent-projects-container"
@@ -47,17 +49,17 @@ export default function ProjectsPage() {
 							description="Full stack list creation, productivity tracker, quick journal, and feedback application. Extensive testing with Playwright. Will extend and continue to add feature over time."
 							pictures={[
 								{
-									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/journal.png',
+									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Ittero1.png',
 									description: 'writing journal',
 									alt: 'writing journal'
 								},
 								{
-									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/dashboard.png',
+									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Ittero2.png',
 									description: 'ittero dashboard page',
 									alt: 'dashboard'
 								},
 								{
-									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/createJournal.png',
+									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Ittero3.png',
 									description: 'website create journal entry form',
 									alt: 'create journal form'
 								}
@@ -144,13 +146,13 @@ export default function ProjectsPage() {
 						/>
 					</div>
 				</div>
-
-				{/* Older Projects Section */}
 				<div className="mb-16">
-					<div className="flex justify-center mb-8">
-						<h2 className="font-title text-xl lg:text-2xl font-bold px-8 py-4 bg-zinc-800 text-amber-500 rounded-lg shadow-lg">
-							Older Projects
-						</h2>
+					<div className="bg-zinc-800 w-[90%] md:w-[70% lg:w-[60%] mx-auto h-10 pt-1 rounded-full overflow-hidden">
+						<div className="border-b-2 border-amber-600 relative w-[95%] mx-auto mb-8">
+							<h2 className="sans-font text-2xl font-bold bg-zinc-800 text-amber-600 text-center mx-auto -mb-4 w-fit px-4">
+								Previous Projects
+							</h2>
+						</div>
 					</div>
 					<div
 						id="older-projects-container"
@@ -216,35 +218,6 @@ export default function ProjectsPage() {
 							testPlan=""
 						/>
 						<Project
-							title="Cedaring VR Art Showcase"
-							description="Learning ThreeJS and 3D web development basics in order to display artwork created in VR and create more dynamic and interesting web experiences"
-							pictures={[
-								{
-									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art1.png',
-									description: 'Cedaring art scenes',
-									alt: 'Cedaring art scenes'
-								},
-								{
-									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art2.png',
-									description: 'art modal',
-									alt: 'art modal'
-								},
-								{
-									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art3.png',
-									description: 'cedaring homepage',
-									alt: 'Cedaring homepage'
-								}
-							]}
-							logos={[
-								{ name: 'React', url: ReactJS },
-								{ name: 'ThreeJS', url: ThreeJs },
-								{ name: 'Playwright', url: Playwright },
-								{ name: 'S3', url: S3 }
-							]}
-							link="https://d2ubvddn7k4zah.cloudfront.net/"
-							testPlan=""
-						/>
-						<Project
 							title="Development Blog"
 							description="Personal Blog about development, coding, and interacting with cloud architecture. Uses posts written in markdown. Switched to LLC branding. Will add more posts over time."
 							pictures={[
@@ -271,6 +244,49 @@ export default function ProjectsPage() {
 								{ name: 'Markdown', url: Markdown }
 							]}
 							link="https://www.radiantpine-devblog.com/"
+							testPlan=""
+						/>
+					</div>
+				</div>
+				<div className="mb-16">
+					<div className="bg-zinc-800 w-[90%] md:w-[70% lg:w-[60%] mx-auto h-10 pt-1 rounded-full overflow-hidden">
+						<div className="border-b-2 border-amber-600 relative w-[95%] mx-auto mb-8">
+							<h2 className="sans-font text-2xl font-bold bg-zinc-800 text-amber-600 text-center mx-auto -mb-4 w-fit px-4">
+								Legacy Projects
+							</h2>
+						</div>
+					</div>
+					<div
+						id="older-projects-container"
+						className="flex flex-row gap-8 flex-wrap md:max-w-[1600px] mx-auto justify-center"
+					>
+						<Project
+							title="Cedaring VR Art Showcase"
+							description="Learning ThreeJS and 3D web development basics in order to display artwork created in VR and create more dynamic and interesting web experiences"
+							pictures={[
+								{
+									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art1.png',
+									description: 'Cedaring art scenes',
+									alt: 'Cedaring art scenes'
+								},
+								{
+									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art2.png',
+									description: 'art modal',
+									alt: 'art modal'
+								},
+								{
+									url: 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/Art3.png',
+									description: 'cedaring homepage',
+									alt: 'Cedaring homepage'
+								}
+							]}
+							logos={[
+								{ name: 'React', url: ReactJS },
+								{ name: 'ThreeJS', url: ThreeJs },
+								{ name: 'Playwright', url: Playwright },
+								{ name: 'S3', url: S3 }
+							]}
+							link="https://d2ubvddn7k4zah.cloudfront.net/"
 							testPlan=""
 						/>
 

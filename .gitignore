@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
+# auto-generated files
+src/buildInfo.ts
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

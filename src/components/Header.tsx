@@ -10,12 +10,24 @@ type SizeProps = {
 const Header = () => {
 	const [isSticky, setSticky] = useState(false)
 	const [menuOpen, setMenuOpen] = useState(false)
+	const [isClosing, setIsClosing] = useState(false)
 	const [size, setSize] = useState<SizeProps>({ width: window.innerWidth, height: window.innerHeight })
 	const breakpoint = 764
 
 	const menuToggleOpen = () => {
-		document.body.classList.toggle('header-menu-open')
-		setMenuOpen((open) => !open)
+		if (menuOpen) {
+			// Start closing animation
+			setIsClosing(true)
+			setTimeout(() => {
+				setMenuOpen(false)
+				setIsClosing(false)
+				document.body.classList.remove('header-menu-open')
+			}, 300) // Match animation duration
+		} else {
+			// Open menu
+			setMenuOpen(true)
+			document.body.classList.add('header-menu-open')
+		}
 	}
 
 	const handleScroll = () => {
@@ -57,7 +69,7 @@ const Header = () => {
 	return (
 		<div
 			id="header-container"
-			className={`transparent flex flex-row justify-between h-[60px] w-full z-10  sans-font absolute top-0 ${stickyHeader}`}
+			className={`transparent flex flex-row justify-between h-[60px] w-full z-50  sans-font absolute top-0 ${stickyHeader}`}
 		>
 			<div className="min-w-[250px]">
 				<a href="/">
@@ -79,7 +91,7 @@ const Header = () => {
 							onClick={menuToggleOpen}
 						/>
 						{menuOpen && (
-							<div className="fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-6">
+							<div className={`fixed bg-stone-700 text-white w-screen left-0 top-0 h-screen pt-6 ${isClosing ? 'mobile-menu-exit' : 'mobile-menu-enter'}`}>
 								<a href="/">
 									<h1 className={`text-3xl text-amber-600 font-bold`}>Matt Ray Dev Portfolio</h1>
 								</a>
@@ -90,21 +102,21 @@ const Header = () => {
 											className="absolute right-10 hover:text-amber-600 top-6"
 										/>
 									</li>
-									<li className="hover:text-amber-600">
+									<li className="hover:text-amber-600 mobile-menu-item">
 										<button>
 											<a href="/projects" className="">
 												Projects
 											</a>
 										</button>
 									</li>
-									<li className="hover:text-amber-600">
+									<li className="hover:text-amber-600 mobile-menu-item">
 										<button>
 											<a href="/resume" className="">
 												Resume
 											</a>
 										</button>
 									</li>
-									<li className="hover:text-amber-600">
+									<li className="hover:text-amber-600 mobile-menu-item">
 										<button>
 											<a
 												href="https://github.com/Cedaring-xr"

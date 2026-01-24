@@ -4,21 +4,23 @@ import ProjectsPage from './pages/Projects'
 import ResumePage from './pages/Resume'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import PageTransition from './components/PageTransition'
 import ItteroTestPlan from './pages/ItteroTestPlan'
 import ClimbSafeTestPlan from './pages/ClimbSafeTestPlan'
+import { BUILD_INFO } from './buildInfo'
 
 export default function PageRoutes() {
 	return (
 		<Router>
 			<Header />
 			<Routes>
-				<Route path="/" element={<HomePage />} />
-				<Route path="/projects" element={<ProjectsPage />} />
-				<Route path="/resume" element={<ResumePage />} />
-				<Route path="/ItteroTestPlan" element={<ItteroTestPlan />} />
-				<Route path="/climbSafeTestPlan" element={<ClimbSafeTestPlan />} />
+				<Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
+				<Route path="/projects" element={<PageTransition><ProjectsPage /></PageTransition>} />
+				<Route path="/resume" element={<PageTransition><ResumePage /></PageTransition>} />
+				<Route path="/ItteroTestPlan" element={<PageTransition><ItteroTestPlan /></PageTransition>} />
+				<Route path="/climbSafeTestPlan" element={<PageTransition><ClimbSafeTestPlan /></PageTransition>} />
 			</Routes>
-			<Footer date="Jan. 2026" />
+			<Footer date={BUILD_INFO.lastUpdated} />
 		</Router>
 	)
 }
