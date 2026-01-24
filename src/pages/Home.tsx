@@ -1,12 +1,19 @@
 import Profile from '../components/Profile'
 import Certifications from '../components/Certifications'
 import self from '../assets/self.png'
+import Skills from '../components/Skills'
+import Books from '../components/Books'
 
 export default function HomePage() {
 	return (
 		<div>
 			<div className="background pt-[200px] lg:pt-[350px] flex flex-col">
-				<Profile title="MATT RAY" subTitle="Web Developer & QA Automation Engineer" img={self} />
+				<Profile
+					title="MATT RAY"
+					subTitle="Web Developer & QA Automation Engineer"
+					email="mattray.dev@gmail.com"
+					img={self}
+				/>
 				<Certifications />
 			</div>
 			<div className="bg-zinc-900 pt-12 pb-6 lg:pb-24">
@@ -91,6 +98,8 @@ export default function HomePage() {
 					</div>
 				</div>
 			</div>
+			<Skills />
+			<Books />
 		</div>
 	)
 }

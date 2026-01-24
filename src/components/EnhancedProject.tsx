@@ -28,6 +28,30 @@ const EnhancedProject: React.FC<EnhancedProjectProps> = ({
 	architectureDiagram
 }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [isImageLoaded, setIsImageLoaded] = useState(false)
+	const [isLoading, setIsLoading] = useState(false)
+
+	const handleOpenModal = () => {
+		setIsLoading(true)
+
+		// Preload the image before showing the modal
+		const img = new Image()
+		img.src = architectureDiagram
+		img.onload = () => {
+			setIsImageLoaded(true)
+			setIsLoading(false)
+			setIsModalOpen(true)
+		}
+		img.onerror = () => {
+			setIsLoading(false)
+			alert('Failed to load architecture diagram')
+		}
+	}
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false)
+		setIsImageLoaded(false)
+	}
 
 	return (
 		<div className="p-4 my-8 mx-2 w-full md:w-[440px] flex flex-col items-center border-2 border-black rounded-xl bg-zinc-800 text-white shadow-lg">
@@ -46,7 +70,7 @@ const EnhancedProject: React.FC<EnhancedProjectProps> = ({
 						View Live Project
 					</a>
 				) : (
-					<button className="button my-4 bg-zinc-400 text-black cursor-default">Under Construction</button>
+					<button className="button my-4 bg-zinc-400 text-black cursor-default">under development</button>
 				)}
 				{testPlan.length > 1 ? (
 					<a
@@ -61,10 +85,11 @@ const EnhancedProject: React.FC<EnhancedProjectProps> = ({
 				)}
 				{architectureDiagram.length > 1 ? (
 					<button
-						className="button my-4 bg-blue-600 hover:bg-blue-500 text-white hover:scale-105"
-						onClick={() => setIsModalOpen(true)}
+						className="button my-4 bg-blue-600 hover:bg-blue-500 text-white hover:scale-105 disabled:opacity-50 disabled:cursor-wait"
+						onClick={handleOpenModal}
+						disabled={isLoading}
 					>
-						View Architecture
+						{isLoading ? 'Loading...' : 'View Architecture'}
 					</button>
 				) : (
 					<></>
@@ -72,18 +97,12 @@ const EnhancedProject: React.FC<EnhancedProjectProps> = ({
 			</div>
 
 			{/* Architecture Diagram Modal */}
-			{isModalOpen && (
-				<div
-					className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-					onClick={() => setIsModalOpen(false)}
-				>
-					<div
-						className="relative bg-white p-4 rounded-lg max-w-[90vw] max-h-[90vh] overflow-auto"
-						onClick={(e) => e.stopPropagation()}
-					>
+			{isModalOpen && isImageLoaded && (
+				<div className="modal-overlay" onClick={handleCloseModal}>
+					<div className="modal-content" onClick={(e) => e.stopPropagation()}>
 						<button
 							className="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded"
-							onClick={() => setIsModalOpen(false)}
+							onClick={handleCloseModal}
 						>
 							Close
 						</button>
