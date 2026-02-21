@@ -1,6 +1,6 @@
 function ResumePage() {
 	return (
-		<div id="main-container" className="bg-transparent mt-[150px] overflow-x-hidden max-w-full min-h-screen">
+		<main id="main-container" className="bg-transparent mt-[150px] overflow-x-hidden max-w-full min-h-screen">
 			<div
 				id="resume-container"
 				className="w-full md:w-[85%] lg:w-[65%] h-[600px] md:h-[1000px] lg:h-[1200px] pt-16 mx-auto px-2 md:px-4 max-w-full pb-4"
@@ -14,7 +14,7 @@ function ResumePage() {
 					height="100%"
 				></iframe>
 			</div>
-		</div>
+		</main>
 	)
 }
 

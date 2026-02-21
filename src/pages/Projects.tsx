@@ -25,8 +25,8 @@ const Vite = 'https://mray-dev-resources.s3.us-east-2.amazonaws.com/portfolio/ic
 
 export default function ProjectsPage() {
 	return (
-		<>
-			<div className="bg-transparent md:background mt-[180px]">
+		<main>
+			<div className="background mt-[180px]">
 				<h1 className="font-title text-2xl lg:text-3xl text-center font-bold mb-24">
 					Personal Coding Projects
 				</h1>
@@ -352,6 +352,6 @@ export default function ProjectsPage() {
 					</div>
 				</div>
 			</div>
-		</>
+		</main>
 	)
 }

@@ -6,7 +6,7 @@ import Books from '../components/Books'
 
 export default function HomePage() {
 	return (
-		<div>
+		<main>
 			<div className="background pt-[200px] lg:pt-[350px] flex flex-col">
 				<Profile
 					title="MATT RAY"
@@ -100,6 +100,6 @@ export default function HomePage() {
 			</div>
 			<Skills />
 			<Books />
-		</div>
+		</main>
 	)
 }

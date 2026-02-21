@@ -180,4 +180,9 @@
 			transform: scale(1);
 		}
 	}
+
+	/* Prevent body scroll when mobile menu is open */
+	body.header-menu-open {
+		overflow: hidden;
+	}
 }

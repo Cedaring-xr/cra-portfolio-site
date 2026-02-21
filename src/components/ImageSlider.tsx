@@ -64,16 +64,16 @@ const ImageSlider: React.FC<PictureProps> = ({ pictures }) => {
 			</button>
 			<div
 				id="image-button-container"
-				className="absolute flex left-1/2 transform -translate-x-1/2 top-[280px] z-20 py-[1px] px-2 bg-slate-900 rounded-t-xl opacity-90"
+				className="absolute flex left-1/2 transform -translate-x-1/2 -bottom-2 z-20 bg-slate-900 bg-opacity-60 rounded-full px-2"
 			>
 				{pictures.map((_, index) => (
 					<button
 						key={index}
-						aria-label={`view image ${index}`}
+						aria-label={`view image ${index + 1}`}
 						onClick={() => setImageIndex(index)}
-						className="text-white"
+						className="text-white p-2 min-w-[44px] min-h-[44px] flex items-center justify-center hover:scale-110 transition-transform"
 					>
-						{index === imageIndex ? <GoDotFill /> : <GoDot />}
+						{index === imageIndex ? <GoDotFill className="text-2xl" /> : <GoDot className="text-2xl" />}
 					</button>
 				))}
 			</div>
